@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+platform :ios, '6.0'
+inhibit_all_warnings!
+
+target 'NNACommunity' do
+
+pod 'JSONKit', '~> 1.5pre'
+pod 'AFNetworking', '~> 2.5.3'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'Masonry', '~> 0.6.1'
+pod 'MJExtension', '~> 2.5.12'
+pod 'MJRefresh', '~> 2.4.12'
+pod 'SDWebImage', '~> 3.7.3'
+
+end
+
+target 'NNACommunityTests' do
+
+end
+
+target 'NNACommunityUITests' do
+
+end
+

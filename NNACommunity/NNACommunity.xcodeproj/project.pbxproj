@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BF45EE9981893A7A9537339 /* libPods-NNACommunity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB7B69EE6CC1EA1023FE250 /* libPods-NNACommunity.a */; };
 		849AE4681C859F57000F9337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4671C859F57000F9337 /* main.m */; };
 		849AE46B1C859F57000F9337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46A1C859F57000F9337 /* AppDelegate.m */; };
 		849AE46E1C859F57000F9337 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46D1C859F57000F9337 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FDB5B361ECD53804C7BF8F3 /* Pods-NNACommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNACommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NNACommunity/Pods-NNACommunity.debug.xcconfig"; sourceTree = "<group>"; };
+		7276CD9AE29897E3EFB13172 /* Pods-NNACommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNACommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-NNACommunity/Pods-NNACommunity.release.xcconfig"; sourceTree = "<group>"; };
 		849AE4631C859F57000F9337 /* NNACommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNACommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849AE4671C859F57000F9337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		849AE4691C859F57000F9337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		849AE48A1C859F58000F9337 /* NNACommunityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNACommunityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849AE48E1C859F58000F9337 /* NNACommunityUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNACommunityUITests.m; sourceTree = "<group>"; };
 		849AE4901C859F58000F9337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB7B69EE6CC1EA1023FE250 /* libPods-NNACommunity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NNACommunity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF45EE9981893A7A9537339 /* libPods-NNACommunity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C51C726771BC3FA98E04D2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAB7B69EE6CC1EA1023FE250 /* libPods-NNACommunity.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		849AE45A1C859F57000F9337 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,8 @@
 				849AE4821C859F57000F9337 /* NNACommunityTests */,
 				849AE48D1C859F58000F9337 /* NNACommunityUITests */,
 				849AE4641C859F57000F9337 /* Products */,
+				AA7A2CB36A20B6CEEF642EAE /* Pods */,
+				6C51C726771BC3FA98E04D2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +158,15 @@
 			path = NNACommunityUITests;
 			sourceTree = "<group>";
 		};
+		AA7A2CB36A20B6CEEF642EAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FDB5B361ECD53804C7BF8F3 /* Pods-NNACommunity.debug.xcconfig */,
+				7276CD9AE29897E3EFB13172 /* Pods-NNACommunity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849AE4931C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunity" */;
 			buildPhases = (
+				03265272E8477C5E26E9BA9D /* Check Pods Manifest.lock */,
 				849AE45F1C859F57000F9337 /* Sources */,
 				849AE4601C859F57000F9337 /* Frameworks */,
 				849AE4611C859F57000F9337 /* Resources */,
+				D304B36695309DB5D74F2ABA /* Embed Pods Frameworks */,
+				671904481D566D5B59D90B9D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +297,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03265272E8477C5E26E9BA9D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		671904481D566D5B59D90B9D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NNACommunity/Pods-NNACommunity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D304B36695309DB5D74F2ABA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NNACommunity/Pods-NNACommunity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		849AE45F1C859F57000F9337 /* Sources */ = {
@@ -416,6 +491,7 @@
 		};
 		849AE4941C859F58000F9337 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FDB5B361ECD53804C7BF8F3 /* Pods-NNACommunity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NNACommunity/Info.plist;
@@ -427,6 +503,7 @@
 		};
 		849AE4951C859F58000F9337 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7276CD9AE29897E3EFB13172 /* Pods-NNACommunity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NNACommunity/Info.plist;
@@ -503,6 +580,7 @@
 				849AE4951C859F58000F9337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		849AE4961C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunityTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +589,7 @@
 				849AE4981C859F58000F9337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		849AE4991C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunityUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +598,7 @@
 				849AE49B1C859F58000F9337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
