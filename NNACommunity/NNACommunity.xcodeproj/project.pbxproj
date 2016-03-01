@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		849AE4681C859F57000F9337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4671C859F57000F9337 /* main.m */; };
+		849AE46B1C859F57000F9337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46A1C859F57000F9337 /* AppDelegate.m */; };
+		849AE46E1C859F57000F9337 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46D1C859F57000F9337 /* ViewController.m */; };
+		849AE4711C859F57000F9337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AE46F1C859F57000F9337 /* Main.storyboard */; };
+		849AE4741C859F57000F9337 /* NNACommunity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4721C859F57000F9337 /* NNACommunity.xcdatamodeld */; };
+		849AE4761C859F57000F9337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849AE4751C859F57000F9337 /* Assets.xcassets */; };
+		849AE4791C859F57000F9337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AE4771C859F57000F9337 /* LaunchScreen.storyboard */; };
+		849AE4841C859F57000F9337 /* NNACommunityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4831C859F57000F9337 /* NNACommunityTests.m */; };
+		849AE48F1C859F58000F9337 /* NNACommunityUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE48E1C859F58000F9337 /* NNACommunityUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		849AE4801C859F57000F9337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849AE45B1C859F57000F9337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 849AE4621C859F57000F9337;
+			remoteInfo = NNACommunity;
+		};
+		849AE48B1C859F58000F9337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849AE45B1C859F57000F9337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 849AE4621C859F57000F9337;
+			remoteInfo = NNACommunity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		849AE4631C859F57000F9337 /* NNACommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNACommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		849AE4671C859F57000F9337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		849AE4691C859F57000F9337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		849AE46A1C859F57000F9337 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		849AE46C1C859F57000F9337 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		849AE46D1C859F57000F9337 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		849AE4701C859F57000F9337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		849AE4731C859F57000F9337 /* NNACommunity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NNACommunity.xcdatamodel; sourceTree = "<group>"; };
+		849AE4751C859F57000F9337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		849AE4781C859F57000F9337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		849AE47A1C859F57000F9337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849AE47F1C859F57000F9337 /* NNACommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNACommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		849AE4831C859F57000F9337 /* NNACommunityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNACommunityTests.m; sourceTree = "<group>"; };
+		849AE4851C859F57000F9337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849AE48A1C859F58000F9337 /* NNACommunityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNACommunityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		849AE48E1C859F58000F9337 /* NNACommunityUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNACommunityUITests.m; sourceTree = "<group>"; };
+		849AE4901C859F58000F9337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		849AE4601C859F57000F9337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849AE47C1C859F57000F9337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849AE4871C859F58000F9337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849AE45A1C859F57000F9337 = {
+			isa = PBXGroup;
+			children = (
+				849AE4651C859F57000F9337 /* NNACommunity */,
+				849AE4821C859F57000F9337 /* NNACommunityTests */,
+				849AE48D1C859F58000F9337 /* NNACommunityUITests */,
+				849AE4641C859F57000F9337 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		849AE4641C859F57000F9337 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				849AE4631C859F57000F9337 /* NNACommunity.app */,
+				849AE47F1C859F57000F9337 /* NNACommunityTests.xctest */,
+				849AE48A1C859F58000F9337 /* NNACommunityUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		849AE4651C859F57000F9337 /* NNACommunity */ = {
+			isa = PBXGroup;
+			children = (
+				849AE4691C859F57000F9337 /* AppDelegate.h */,
+				849AE46A1C859F57000F9337 /* AppDelegate.m */,
+				849AE46C1C859F57000F9337 /* ViewController.h */,
+				849AE46D1C859F57000F9337 /* ViewController.m */,
+				849AE46F1C859F57000F9337 /* Main.storyboard */,
+				849AE4751C859F57000F9337 /* Assets.xcassets */,
+				849AE4771C859F57000F9337 /* LaunchScreen.storyboard */,
+				849AE47A1C859F57000F9337 /* Info.plist */,
+				849AE4721C859F57000F9337 /* NNACommunity.xcdatamodeld */,
+				849AE4661C859F57000F9337 /* Supporting Files */,
+			);
+			path = NNACommunity;
+			sourceTree = "<group>";
+		};
+		849AE4661C859F57000F9337 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				849AE4671C859F57000F9337 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		849AE4821C859F57000F9337 /* NNACommunityTests */ = {
+			isa = PBXGroup;
+			children = (
+				849AE4831C859F57000F9337 /* NNACommunityTests.m */,
+				849AE4851C859F57000F9337 /* Info.plist */,
+			);
+			path = NNACommunityTests;
+			sourceTree = "<group>";
+		};
+		849AE48D1C859F58000F9337 /* NNACommunityUITests */ = {
+			isa = PBXGroup;
+			children = (
+				849AE48E1C859F58000F9337 /* NNACommunityUITests.m */,
+				849AE4901C859F58000F9337 /* Info.plist */,
+			);
+			path = NNACommunityUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		849AE4621C859F57000F9337 /* NNACommunity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849AE4931C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunity" */;
+			buildPhases = (
+				849AE45F1C859F57000F9337 /* Sources */,
+				849AE4601C859F57000F9337 /* Frameworks */,
+				849AE4611C859F57000F9337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NNACommunity;
+			productName = NNACommunity;
+			productReference = 849AE4631C859F57000F9337 /* NNACommunity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		849AE47E1C859F57000F9337 /* NNACommunityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849AE4961C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunityTests" */;
+			buildPhases = (
+				849AE47B1C859F57000F9337 /* Sources */,
+				849AE47C1C859F57000F9337 /* Frameworks */,
+				849AE47D1C859F57000F9337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				849AE4811C859F57000F9337 /* PBXTargetDependency */,
+			);
+			name = NNACommunityTests;
+			productName = NNACommunityTests;
+			productReference = 849AE47F1C859F57000F9337 /* NNACommunityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		849AE4891C859F58000F9337 /* NNACommunityUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849AE4991C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunityUITests" */;
+			buildPhases = (
+				849AE4861C859F58000F9337 /* Sources */,
+				849AE4871C859F58000F9337 /* Frameworks */,
+				849AE4881C859F58000F9337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				849AE48C1C859F58000F9337 /* PBXTargetDependency */,
+			);
+			name = NNACommunityUITests;
+			productName = NNACommunityUITests;
+			productReference = 849AE48A1C859F58000F9337 /* NNACommunityUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		849AE45B1C859F57000F9337 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Leben.NNA;
+				TargetAttributes = {
+					849AE4621C859F57000F9337 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = X6QFZ23N52;
+					};
+					849AE47E1C859F57000F9337 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = X6QFZ23N52;
+						TestTargetID = 849AE4621C859F57000F9337;
+					};
+					849AE4891C859F58000F9337 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = X6QFZ23N52;
+						TestTargetID = 849AE4621C859F57000F9337;
+					};
+				};
+			};
+			buildConfigurationList = 849AE45E1C859F57000F9337 /* Build configuration list for PBXProject "NNACommunity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 849AE45A1C859F57000F9337;
+			productRefGroup = 849AE4641C859F57000F9337 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				849AE4621C859F57000F9337 /* NNACommunity */,
+				849AE47E1C859F57000F9337 /* NNACommunityTests */,
+				849AE4891C859F58000F9337 /* NNACommunityUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		849AE4611C859F57000F9337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849AE4791C859F57000F9337 /* LaunchScreen.storyboard in Resources */,
+				849AE4761C859F57000F9337 /* Assets.xcassets in Resources */,
+				849AE4711C859F57000F9337 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849AE47D1C859F57000F9337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849AE4881C859F58000F9337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		849AE45F1C859F57000F9337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849AE46E1C859F57000F9337 /* ViewController.m in Sources */,
+				849AE46B1C859F57000F9337 /* AppDelegate.m in Sources */,
+				849AE4681C859F57000F9337 /* main.m in Sources */,
+				849AE4741C859F57000F9337 /* NNACommunity.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849AE47B1C859F57000F9337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849AE4841C859F57000F9337 /* NNACommunityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849AE4861C859F58000F9337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849AE48F1C859F58000F9337 /* NNACommunityUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		849AE4811C859F57000F9337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 849AE4621C859F57000F9337 /* NNACommunity */;
+			targetProxy = 849AE4801C859F57000F9337 /* PBXContainerItemProxy */;
+		};
+		849AE48C1C859F58000F9337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 849AE4621C859F57000F9337 /* NNACommunity */;
+			targetProxy = 849AE48B1C859F58000F9337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		849AE46F1C859F57000F9337 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849AE4701C859F57000F9337 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		849AE4771C859F57000F9337 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849AE4781C859F57000F9337 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		849AE4911C859F58000F9337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		849AE4921C859F58000F9337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		849AE4941C859F58000F9337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NNACommunity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leben.NNA.NNACommunity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		849AE4951C859F58000F9337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NNACommunity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leben.NNA.NNACommunity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		849AE4971C859F58000F9337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NNACommunityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leben.NNA.NNACommunityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NNACommunity.app/NNACommunity";
+			};
+			name = Debug;
+		};
+		849AE4981C859F58000F9337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NNACommunityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leben.NNA.NNACommunityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NNACommunity.app/NNACommunity";
+			};
+			name = Release;
+		};
+		849AE49A1C859F58000F9337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NNACommunityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leben.NNA.NNACommunityUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NNACommunity;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		849AE49B1C859F58000F9337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NNACommunityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leben.NNA.NNACommunityUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NNACommunity;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		849AE45E1C859F57000F9337 /* Build configuration list for PBXProject "NNACommunity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849AE4911C859F58000F9337 /* Debug */,
+				849AE4921C859F58000F9337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849AE4931C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849AE4941C859F58000F9337 /* Debug */,
+				849AE4951C859F58000F9337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		849AE4961C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849AE4971C859F58000F9337 /* Debug */,
+				849AE4981C859F58000F9337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		849AE4991C859F58000F9337 /* Build configuration list for PBXNativeTarget "NNACommunityUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849AE49A1C859F58000F9337 /* Debug */,
+				849AE49B1C859F58000F9337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		849AE4721C859F57000F9337 /* NNACommunity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				849AE4731C859F57000F9337 /* NNACommunity.xcdatamodel */,
+			);
+			currentVersion = 849AE4731C859F57000F9337 /* NNACommunity.xcdatamodel */;
+			path = NNACommunity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 849AE45B1C859F57000F9337 /* Project object */;
+}
