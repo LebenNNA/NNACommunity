@@ -237,15 +237,16 @@
 		8427B3FF1C86EDF4000ABA07 /* 085@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B3161C86EDF4000ABA07 /* 085@2x.png */; };
 		8427B4001C86EDF4000ABA07 /* faceMap_ch.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427B3171C86EDF4000ABA07 /* faceMap_ch.plist */; };
 		8427B4011C86EDF4000ABA07 /* faceMap_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427B3181C86EDF4000ABA07 /* faceMap_en.plist */; };
-		8427B4021C86EDF4000ABA07 /* imageBoardBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B3191C86EDF4000ABA07 /* imageBoardBtn@2x.png */; };
-		8427B4031C86EDF4000ABA07 /* imageBoardBtn_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B31A1C86EDF4000ABA07 /* imageBoardBtn_hl@2x.png */; };
 		8427B4041C86EDF4000ABA07 /* keyBoardBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B31B1C86EDF4000ABA07 /* keyBoardBtn@2x.png */; };
 		8427B4051C86EDF4000ABA07 /* keyBoardBtn_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B31C1C86EDF4000ABA07 /* keyBoardBtn_hl@2x.png */; };
 		8427B4081C86EE72000ABA07 /* NNAEmoBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427B4071C86EE72000ABA07 /* NNAEmoBoard.m */; };
 		8427B40B1C86EF90000ABA07 /* NNAEmoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427B40A1C86EF8F000ABA07 /* NNAEmoButton.m */; };
+		846926E61C87DD3900A4B0BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926E51C87DD3900A4B0BB /* ViewController.m */; };
+		846926E91C87EF2B00A4B0BB /* NNAEmoInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926E81C87EF2B00A4B0BB /* NNAEmoInputBar.m */; };
+		846926EC1C8822B800A4B0BB /* NKBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926EB1C8822B800A4B0BB /* NKBViewController.m */; };
 		849AE4681C859F57000F9337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4671C859F57000F9337 /* main.m */; };
 		849AE46B1C859F57000F9337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46A1C859F57000F9337 /* AppDelegate.m */; };
-		849AE46E1C859F57000F9337 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46D1C859F57000F9337 /* ViewController.m */; };
+		849AE46E1C859F57000F9337 /* KBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46D1C859F57000F9337 /* KBViewController.m */; };
 		849AE4711C859F57000F9337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AE46F1C859F57000F9337 /* Main.storyboard */; };
 		849AE4741C859F57000F9337 /* NNACommunity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4721C859F57000F9337 /* NNACommunity.xcdatamodeld */; };
 		849AE4761C859F57000F9337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849AE4751C859F57000F9337 /* Assets.xcassets */; };
@@ -504,20 +505,24 @@
 		8427B3161C86EDF4000ABA07 /* 085@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "085@2x.png"; sourceTree = "<group>"; };
 		8427B3171C86EDF4000ABA07 /* faceMap_ch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = faceMap_ch.plist; sourceTree = "<group>"; };
 		8427B3181C86EDF4000ABA07 /* faceMap_en.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = faceMap_en.plist; sourceTree = "<group>"; };
-		8427B3191C86EDF4000ABA07 /* imageBoardBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageBoardBtn@2x.png"; sourceTree = "<group>"; };
-		8427B31A1C86EDF4000ABA07 /* imageBoardBtn_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageBoardBtn_hl@2x.png"; sourceTree = "<group>"; };
 		8427B31B1C86EDF4000ABA07 /* keyBoardBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyBoardBtn@2x.png"; sourceTree = "<group>"; };
 		8427B31C1C86EDF4000ABA07 /* keyBoardBtn_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyBoardBtn_hl@2x.png"; sourceTree = "<group>"; };
 		8427B4061C86EE72000ABA07 /* NNAEmoBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAEmoBoard.h; sourceTree = "<group>"; };
 		8427B4071C86EE72000ABA07 /* NNAEmoBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAEmoBoard.m; sourceTree = "<group>"; };
 		8427B4091C86EF8F000ABA07 /* NNAEmoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAEmoButton.h; sourceTree = "<group>"; };
 		8427B40A1C86EF8F000ABA07 /* NNAEmoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAEmoButton.m; sourceTree = "<group>"; };
+		846926E41C87DD3900A4B0BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		846926E51C87DD3900A4B0BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		846926E71C87EF2B00A4B0BB /* NNAEmoInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAEmoInputBar.h; sourceTree = "<group>"; };
+		846926E81C87EF2B00A4B0BB /* NNAEmoInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAEmoInputBar.m; sourceTree = "<group>"; };
+		846926EA1C8822B800A4B0BB /* NKBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKBViewController.h; sourceTree = "<group>"; };
+		846926EB1C8822B800A4B0BB /* NKBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKBViewController.m; sourceTree = "<group>"; };
 		849AE4631C859F57000F9337 /* NNACommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNACommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849AE4671C859F57000F9337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		849AE4691C859F57000F9337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		849AE46A1C859F57000F9337 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		849AE46C1C859F57000F9337 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		849AE46D1C859F57000F9337 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		849AE46C1C859F57000F9337 /* KBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBViewController.h; sourceTree = "<group>"; };
+		849AE46D1C859F57000F9337 /* KBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBViewController.m; sourceTree = "<group>"; };
 		849AE4701C859F57000F9337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849AE4731C859F57000F9337 /* NNACommunity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NNACommunity.xcdatamodel; sourceTree = "<group>"; };
 		849AE4751C859F57000F9337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -575,6 +580,8 @@
 				8427B4071C86EE72000ABA07 /* NNAEmoBoard.m */,
 				8427B4091C86EF8F000ABA07 /* NNAEmoButton.h */,
 				8427B40A1C86EF8F000ABA07 /* NNAEmoButton.m */,
+				846926E71C87EF2B00A4B0BB /* NNAEmoInputBar.h */,
+				846926E81C87EF2B00A4B0BB /* NNAEmoInputBar.m */,
 			);
 			path = NNAEmotion;
 			sourceTree = "<group>";
@@ -586,8 +593,6 @@
 				8427B2331C86EDF4000ABA07 /* deleteEmoji_hl@2x.png */,
 				8427B26A1C86EDF4000ABA07 /* emojiBoardBtn@2x.png */,
 				8427B26B1C86EDF4000ABA07 /* emojiBoardBtn_hl@2x.png */,
-				8427B3191C86EDF4000ABA07 /* imageBoardBtn@2x.png */,
-				8427B31A1C86EDF4000ABA07 /* imageBoardBtn_hl@2x.png */,
 				8427B31B1C86EDF4000ABA07 /* keyBoardBtn@2x.png */,
 				8427B31C1C86EDF4000ABA07 /* keyBoardBtn_hl@2x.png */,
 				8427B2341C86EDF4000ABA07 /* emoji */,
@@ -863,8 +868,12 @@
 				8427B1A21C86BDDA000ABA07 /* NNAEmotion */,
 				849AE4691C859F57000F9337 /* AppDelegate.h */,
 				849AE46A1C859F57000F9337 /* AppDelegate.m */,
-				849AE46C1C859F57000F9337 /* ViewController.h */,
-				849AE46D1C859F57000F9337 /* ViewController.m */,
+				846926E41C87DD3900A4B0BB /* ViewController.h */,
+				846926E51C87DD3900A4B0BB /* ViewController.m */,
+				849AE46C1C859F57000F9337 /* KBViewController.h */,
+				849AE46D1C859F57000F9337 /* KBViewController.m */,
+				846926EA1C8822B800A4B0BB /* NKBViewController.h */,
+				846926EB1C8822B800A4B0BB /* NKBViewController.m */,
 				849AE46F1C859F57000F9337 /* Main.storyboard */,
 				849AE4751C859F57000F9337 /* Assets.xcassets */,
 				849AE4771C859F57000F9337 /* LaunchScreen.storyboard */,
@@ -1076,7 +1085,6 @@
 				8427B3521C86EDF4000ABA07 /* EmojiImageMap.plist in Resources */,
 				8427B3481C86EDF4000ABA07 /* emoji_042.png in Resources */,
 				8427B3311C86EDF4000ABA07 /* emoji_019.png in Resources */,
-				8427B4021C86EDF4000ABA07 /* imageBoardBtn@2x.png in Resources */,
 				8427B3981C86EDF4000ABA07 /* 034.png in Resources */,
 				8427B34A1C86EDF4000ABA07 /* emoji_044.png in Resources */,
 				8427B34B1C86EDF4000ABA07 /* emoji_045.png in Resources */,
@@ -1122,7 +1130,6 @@
 				8427B3561C86EDF4000ABA07 /* 001.png in Resources */,
 				8427B35D1C86EDF4000ABA07 /* 004@2x.png in Resources */,
 				8427B38B1C86EDF4000ABA07 /* 027@2x.png in Resources */,
-				8427B4031C86EDF4000ABA07 /* imageBoardBtn_hl@2x.png in Resources */,
 				8427B33A1C86EDF4000ABA07 /* emoji_028.png in Resources */,
 				8427B3D41C86EDF4000ABA07 /* 064.png in Resources */,
 				8427B3DA1C86EDF4000ABA07 /* 067.png in Resources */,
@@ -1327,11 +1334,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846926EC1C8822B800A4B0BB /* NKBViewController.m in Sources */,
+				846926E61C87DD3900A4B0BB /* ViewController.m in Sources */,
 				8427B4081C86EE72000ABA07 /* NNAEmoBoard.m in Sources */,
-				849AE46E1C859F57000F9337 /* ViewController.m in Sources */,
+				849AE46E1C859F57000F9337 /* KBViewController.m in Sources */,
 				849AE46B1C859F57000F9337 /* AppDelegate.m in Sources */,
 				849AE4681C859F57000F9337 /* main.m in Sources */,
 				849AE4741C859F57000F9337 /* NNACommunity.xcdatamodeld in Sources */,
+				846926E91C87EF2B00A4B0BB /* NNAEmoInputBar.m in Sources */,
 				8427B40B1C86EF90000ABA07 /* NNAEmoButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

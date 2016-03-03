@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NKBViewController.h
 //  NNACommunity
 //
 //  Created by NNA on 16/3/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface NKBViewController : UIViewController
 
 @end

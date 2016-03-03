@@ -150,36 +150,36 @@
 
 - (void)emoButton:(id)sender {
     int i = (int)((NNAEmoButton *)sender).buttonIndex;
-    if (self.inputTextField) {
+    if (_inputTextField) {
         
         NSMutableString *emoString =
-        [[NSMutableString alloc] initWithString:self.inputTextField.text];
+        [[NSMutableString alloc] initWithString:_inputTextField.text];
         [emoString
          appendString:[_emoMap
                        objectForKey:[NSString stringWithFormat:@"%03d", i]]];
-        self.inputTextField.text = emoString;
+        _inputTextField.text = emoString;
         
-    } else if (self.inputTextView) {
+    } else if (_inputTextView) {
         NSMutableString *emoString =
-        [[NSMutableString alloc] initWithString:self.inputTextView.text];
+        [[NSMutableString alloc] initWithString:_inputTextView.text];
         [emoString
          insertString:[_emoMap
                        objectForKey:[NSString stringWithFormat:@"%03d", i]]
-         atIndex:self.inputTextView.selectedRange.location];
-        self.inputTextView.text = emoString;
+         atIndex:_inputTextView.selectedRange.location];
+        _inputTextView.text = emoString;
         
         if (_delegate &&
             [_delegate respondsToSelector:@selector(textViewDidChange:)]) {
-            [_delegate textViewDidChange:self.inputTextView];
+            [_delegate textViewDidChange:_inputTextView];
         }
     }
 }
 
 - (void)deleteEmo {
     NSString *inputString;
-    inputString = self.inputTextField.text;
-    if (self.inputTextView) {
-        inputString = self.inputTextView.text;
+    inputString = _inputTextField.text;
+    if (_inputTextView) {
+        inputString = _inputTextView.text;
     }
     
     NSString *string = nil;
@@ -200,17 +200,18 @@
         }
     }
     
-    if (self.inputTextField) {
-        self.inputTextField.text = string;
+    if (_inputTextField) {
+        _inputTextField.text = string;
         
-    } else if (self.inputTextView) {
-        self.inputTextView.text = string;
+    } else if (_inputTextView) {
+        _inputTextView.text = string;
         
         if (_delegate &&
             [_delegate respondsToSelector:@selector(textViewDidChange:)]) {
-            [_delegate textViewDidChange:self.inputTextView];
+            [_delegate textViewDidChange:_inputTextView];
         }
     }
 }
+
 
 @end
