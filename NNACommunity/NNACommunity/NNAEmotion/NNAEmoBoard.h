@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NNAEmoUnit.h"
 
 @protocol EmoBoardDelegate <NSObject>
 

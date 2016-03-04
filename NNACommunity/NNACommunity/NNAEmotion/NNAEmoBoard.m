@@ -31,10 +31,7 @@
     CGFloat with = [[UIScreen mainScreen] bounds].size.width;
     self = [super initWithFrame:CGRectMake(0, 0, with, 216)];
     if (self) {
-        self.backgroundColor = [UIColor colorWithRed:236.0 / 255.0
-                                               green:236.0 / 255.0
-                                                blue:236.0 / 255.0
-                                               alpha:1];
+        self.backgroundColor = EMOJBOARD_BG_COLOR;
         
         _emoMap = [NSDictionary
                      dictionaryWithContentsOfFile:[[NSBundle mainBundle]
@@ -65,12 +62,10 @@
                                              EMO_PAGE_ALL * 20 * 0.5,
                                              self.frame.size.height - 15 - 20,
                                              EMO_PAGE_ALL * 20, 20)];
-    _pageControl.pageIndicatorTintColor = [UIColor colorWithRed:255.0 / 255.0
-                                                          green:255.0 / 255.0
-                                                           blue:255.0 / 255.0
-                                                          alpha:1];
-    _pageControl.currentPageIndicatorTintColor =
-    [UIColor colorWithRed:0 / 255.0 green:0 / 255.0 blue:0 / 255.0 alpha:0.5];
+    _pageControl.pageIndicatorTintColor = PAGE_COLOR;
+    _pageControl.currentPageIndicatorTintColor = CURRENTPAGE_COLOR ;
+
+    ;
     [_pageControl addTarget:self
                      action:@selector(pageChange:)
            forControlEvents:UIControlEventValueChanged];
@@ -96,7 +91,6 @@
         //删除按钮
         if (i % EMO_COUNT_PAGE == 0) {
             UIButton *deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            [deleteBtn setTitle:@"删除" forState:UIControlStateNormal];
             [deleteBtn setImage:[UIImage imageNamed:@"deleteEmoji"]
                        forState:UIControlStateNormal];
             [deleteBtn setImage:[UIImage imageNamed:@"deleteEmoji_hl"]
@@ -104,7 +98,7 @@
             [deleteBtn addTarget:self
                           action:@selector(deleteEmo)
                 forControlEvents:UIControlEventTouchUpInside];
-            deleteBtn.frame = CGRectMake(x + 5, y + 10, 23, 21);
+            deleteBtn.frame = CGRectMake(x + 10, y + 15, 23, 21);
             [_emoView addSubview:deleteBtn];
             
             deleteBtnCount++;

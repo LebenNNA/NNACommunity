@@ -135,14 +135,10 @@ static inline NSRegularExpression * NameRegularExpression() {
 - (void)sendBtnAction {
     _textView.text = @"";
     [self textViewDidChange:_textView];
-    
     [_textView resignFirstResponder];
-    
     _isFirstShowKeyboard = YES;
     _isButtonClicked = NO;
-    
     _textView.inputView = nil;
-    
     [_keyboardButton setImage:[UIImage imageNamed:@"emojiBoardBtn"]
                      forState:UIControlStateNormal];
 }

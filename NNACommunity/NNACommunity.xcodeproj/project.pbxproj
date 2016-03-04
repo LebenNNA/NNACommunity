@@ -241,6 +241,16 @@
 		8427B4051C86EDF4000ABA07 /* keyBoardBtn_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B31C1C86EDF4000ABA07 /* keyBoardBtn_hl@2x.png */; };
 		8427B4081C86EE72000ABA07 /* NNAEmoBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427B4071C86EE72000ABA07 /* NNAEmoBoard.m */; };
 		8427B40B1C86EF90000ABA07 /* NNAEmoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427B40A1C86EF8F000ABA07 /* NNAEmoButton.m */; };
+		844D0CA51C897FDA00869FC2 /* FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0C9A1C897FDA00869FC2 /* FontAwesome.m */; };
+		844D0CA61C897FDA00869FC2 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 844D0C9B1C897FDA00869FC2 /* FontAwesome.otf */; };
+		844D0CA71C897FDA00869FC2 /* MLEmojiLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0C9E1C897FDA00869FC2 /* MLEmojiLabel.m */; };
+		844D0CA81C897FDA00869FC2 /* SJEmojiLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CA01C897FDA00869FC2 /* SJEmojiLabel.m */; };
+		844D0CA91C897FDA00869FC2 /* SJRichLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CA21C897FDA00869FC2 /* SJRichLabel.m */; };
+		844D0CAA1C897FDA00869FC2 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CA41C897FDA00869FC2 /* TTTAttributedLabel.m */; };
+		844D0CB41C89820000869FC2 /* EMMarkupProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CAD1C89820000869FC2 /* EMMarkupProperty.m */; };
+		844D0CB51C89820000869FC2 /* EMStringStylingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CAF1C89820000869FC2 /* EMStringStylingConfiguration.m */; };
+		844D0CB61C89820000869FC2 /* EMStylingClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CB11C89820000869FC2 /* EMStylingClass.m */; };
+		844D0CB71C89820000869FC2 /* NSString+EMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CB31C89820000869FC2 /* NSString+EMAdditions.m */; };
 		846926E61C87DD3900A4B0BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926E51C87DD3900A4B0BB /* ViewController.m */; };
 		846926E91C87EF2B00A4B0BB /* NNAEmoInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926E81C87EF2B00A4B0BB /* NNAEmoInputBar.m */; };
 		846926EC1C8822B800A4B0BB /* NKBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926EB1C8822B800A4B0BB /* NKBViewController.m */; };
@@ -511,6 +521,26 @@
 		8427B4071C86EE72000ABA07 /* NNAEmoBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAEmoBoard.m; sourceTree = "<group>"; };
 		8427B4091C86EF8F000ABA07 /* NNAEmoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAEmoButton.h; sourceTree = "<group>"; };
 		8427B40A1C86EF8F000ABA07 /* NNAEmoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAEmoButton.m; sourceTree = "<group>"; };
+		844D0C981C897FDA00869FC2 /* font-awesome-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "font-awesome-codes.h"; sourceTree = "<group>"; };
+		844D0C991C897FDA00869FC2 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
+		844D0C9A1C897FDA00869FC2 /* FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontAwesome.m; sourceTree = "<group>"; };
+		844D0C9B1C897FDA00869FC2 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		844D0C9D1C897FDA00869FC2 /* MLEmojiLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEmojiLabel.h; sourceTree = "<group>"; };
+		844D0C9E1C897FDA00869FC2 /* MLEmojiLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEmojiLabel.m; sourceTree = "<group>"; };
+		844D0C9F1C897FDA00869FC2 /* SJEmojiLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJEmojiLabel.h; sourceTree = "<group>"; };
+		844D0CA01C897FDA00869FC2 /* SJEmojiLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJEmojiLabel.m; sourceTree = "<group>"; };
+		844D0CA11C897FDA00869FC2 /* SJRichLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJRichLabel.h; sourceTree = "<group>"; };
+		844D0CA21C897FDA00869FC2 /* SJRichLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJRichLabel.m; sourceTree = "<group>"; };
+		844D0CA31C897FDA00869FC2 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		844D0CA41C897FDA00869FC2 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		844D0CAC1C89820000869FC2 /* EMMarkupProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMarkupProperty.h; sourceTree = "<group>"; };
+		844D0CAD1C89820000869FC2 /* EMMarkupProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMarkupProperty.m; sourceTree = "<group>"; };
+		844D0CAE1C89820000869FC2 /* EMStringStylingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStringStylingConfiguration.h; sourceTree = "<group>"; };
+		844D0CAF1C89820000869FC2 /* EMStringStylingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStringStylingConfiguration.m; sourceTree = "<group>"; };
+		844D0CB01C89820000869FC2 /* EMStylingClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStylingClass.h; sourceTree = "<group>"; };
+		844D0CB11C89820000869FC2 /* EMStylingClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStylingClass.m; sourceTree = "<group>"; };
+		844D0CB21C89820000869FC2 /* NSString+EMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EMAdditions.h"; sourceTree = "<group>"; };
+		844D0CB31C89820000869FC2 /* NSString+EMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EMAdditions.m"; sourceTree = "<group>"; };
 		846926E41C87DD3900A4B0BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		846926E51C87DD3900A4B0BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		846926E71C87EF2B00A4B0BB /* NNAEmoInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAEmoInputBar.h; sourceTree = "<group>"; };
@@ -840,6 +870,47 @@
 			path = face;
 			sourceTree = "<group>";
 		};
+		844D0C971C897FDA00869FC2 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				844D0C981C897FDA00869FC2 /* font-awesome-codes.h */,
+				844D0C991C897FDA00869FC2 /* FontAwesome.h */,
+				844D0C9A1C897FDA00869FC2 /* FontAwesome.m */,
+				844D0C9B1C897FDA00869FC2 /* FontAwesome.otf */,
+			);
+			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		844D0C9C1C897FDA00869FC2 /* SJRichLabel */ = {
+			isa = PBXGroup;
+			children = (
+				844D0C9D1C897FDA00869FC2 /* MLEmojiLabel.h */,
+				844D0C9E1C897FDA00869FC2 /* MLEmojiLabel.m */,
+				844D0C9F1C897FDA00869FC2 /* SJEmojiLabel.h */,
+				844D0CA01C897FDA00869FC2 /* SJEmojiLabel.m */,
+				844D0CA11C897FDA00869FC2 /* SJRichLabel.h */,
+				844D0CA21C897FDA00869FC2 /* SJRichLabel.m */,
+				844D0CA31C897FDA00869FC2 /* TTTAttributedLabel.h */,
+				844D0CA41C897FDA00869FC2 /* TTTAttributedLabel.m */,
+			);
+			path = SJRichLabel;
+			sourceTree = "<group>";
+		};
+		844D0CAB1C89820000869FC2 /* EMString */ = {
+			isa = PBXGroup;
+			children = (
+				844D0CAC1C89820000869FC2 /* EMMarkupProperty.h */,
+				844D0CAD1C89820000869FC2 /* EMMarkupProperty.m */,
+				844D0CAE1C89820000869FC2 /* EMStringStylingConfiguration.h */,
+				844D0CAF1C89820000869FC2 /* EMStringStylingConfiguration.m */,
+				844D0CB01C89820000869FC2 /* EMStylingClass.h */,
+				844D0CB11C89820000869FC2 /* EMStylingClass.m */,
+				844D0CB21C89820000869FC2 /* NSString+EMAdditions.h */,
+				844D0CB31C89820000869FC2 /* NSString+EMAdditions.m */,
+			);
+			path = EMString;
+			sourceTree = "<group>";
+		};
 		849AE45A1C859F57000F9337 = {
 			isa = PBXGroup;
 			children = (
@@ -865,6 +936,9 @@
 		849AE4651C859F57000F9337 /* NNACommunity */ = {
 			isa = PBXGroup;
 			children = (
+				844D0CAB1C89820000869FC2 /* EMString */,
+				844D0C971C897FDA00869FC2 /* FontAwesome */,
+				844D0C9C1C897FDA00869FC2 /* SJRichLabel */,
 				8427B1A21C86BDDA000ABA07 /* NNAEmotion */,
 				849AE4691C859F57000F9337 /* AppDelegate.h */,
 				849AE46A1C859F57000F9337 /* AppDelegate.m */,
@@ -1189,6 +1263,7 @@
 				8427B3CC1C86EDF4000ABA07 /* 060.png in Resources */,
 				8427B3B41C86EDF4000ABA07 /* 048.png in Resources */,
 				8427B3E21C86EDF4000ABA07 /* 071.png in Resources */,
+				844D0CA61C897FDA00869FC2 /* FontAwesome.otf in Resources */,
 				8427B3301C86EDF4000ABA07 /* emoji_018.png in Resources */,
 				8427B3AE1C86EDF4000ABA07 /* 045.png in Resources */,
 				8427B3411C86EDF4000ABA07 /* emoji_035.png in Resources */,
@@ -1334,11 +1409,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844D0CA71C897FDA00869FC2 /* MLEmojiLabel.m in Sources */,
 				846926EC1C8822B800A4B0BB /* NKBViewController.m in Sources */,
+				844D0CA91C897FDA00869FC2 /* SJRichLabel.m in Sources */,
+				844D0CAA1C897FDA00869FC2 /* TTTAttributedLabel.m in Sources */,
+				844D0CB51C89820000869FC2 /* EMStringStylingConfiguration.m in Sources */,
 				846926E61C87DD3900A4B0BB /* ViewController.m in Sources */,
 				8427B4081C86EE72000ABA07 /* NNAEmoBoard.m in Sources */,
 				849AE46E1C859F57000F9337 /* KBViewController.m in Sources */,
+				844D0CA51C897FDA00869FC2 /* FontAwesome.m in Sources */,
+				844D0CB71C89820000869FC2 /* NSString+EMAdditions.m in Sources */,
+				844D0CA81C897FDA00869FC2 /* SJEmojiLabel.m in Sources */,
+				844D0CB61C89820000869FC2 /* EMStylingClass.m in Sources */,
 				849AE46B1C859F57000F9337 /* AppDelegate.m in Sources */,
+				844D0CB41C89820000869FC2 /* EMMarkupProperty.m in Sources */,
 				849AE4681C859F57000F9337 /* main.m in Sources */,
 				849AE4741C859F57000F9337 /* NNACommunity.xcdatamodeld in Sources */,
 				846926E91C87EF2B00A4B0BB /* NNAEmoInputBar.m in Sources */,

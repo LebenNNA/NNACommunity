@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NNAEmoUnit.h"
 
 @interface NNAEmoInputBar : UIView
 

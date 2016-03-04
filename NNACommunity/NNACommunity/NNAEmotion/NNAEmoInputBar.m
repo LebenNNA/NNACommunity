@@ -87,7 +87,7 @@
 
 
 - (void)layoutPageSubviews{
-    self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+    self.backgroundColor = INPUTBAR_BG_COLOR;
     
     _keyboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _keyboardButton.frame = CGRectMake(0.0f, (DEFUALT_HEIGHT-LEFT_BUTTON_HEIGHT)/2, LEFT_BUTTON_WIDTH, LEFT_BUTTON_HEIGHT);
@@ -109,12 +109,10 @@
     _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _sendButton.frame = CGRectMake(self.frame.size.width-RIGHT_BUTTON_WIDTH, 0, RIGHT_BUTTON_WIDTH, DEFUALT_HEIGHT);
     [_sendButton addTarget:self action:@selector(sendBtnAction) forControlEvents:UIControlEventTouchUpInside];
-    [_sendButton.layer setCornerRadius:6];
-    [_sendButton.layer setMasksToBounds:YES];
     [_sendButton setTitle:@"发送" forState:UIControlStateNormal];
-    [_sendButton setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
-    [_sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_sendButton setTitleColor:[UIColor colorWithWhite:1 alpha:0.3] forState:UIControlStateDisabled];
+    [_sendButton setBackgroundColor:CLEAR_COLOR];
+    [_sendButton setTitleColor:SENDBTN_TITLE_Y forState:UIControlStateNormal];
+    [_sendButton setTitleColor:SENDBTN_TITLE_N forState:UIControlStateDisabled];
     [_sendButton setTitleEdgeInsets:UIEdgeInsetsMake(2.50f, 0.0f, 0.0f, 0.0f)];
     _sendButton.titleLabel.font = [UIFont systemFontOfSize:19];
     _sendButton.enabled = NO;
