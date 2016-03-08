@@ -91,7 +91,7 @@
     
     _keyboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _keyboardButton.frame = CGRectMake(0.0f, (DEFUALT_HEIGHT-LEFT_BUTTON_HEIGHT)/2, LEFT_BUTTON_WIDTH, LEFT_BUTTON_HEIGHT);
-    [_keyboardButton setImage:[UIImage imageNamed:@"keyBoardBtn"] forState:UIControlStateNormal];
+    [_keyboardButton setImage:[UIImage imageNamed:@"emojiBoardBtn"] forState:UIControlStateNormal];
     [_keyboardButton addTarget:self action:@selector(keyboardClick) forControlEvents:UIControlEventTouchUpInside];
     
     _textView = [[UITextView alloc] initWithFrame:CGRectMake(LEFT_BUTTON_WIDTH, (DEFUALT_HEIGHT-TEXTVIEW_DEFUALT_HEIGHT)/2, CGRectGetWidth(self.frame)-LEFT_BUTTON_WIDTH-RIGHT_BUTTON_WIDTH, TEXTVIEW_DEFUALT_HEIGHT)];
@@ -183,7 +183,7 @@
         _isFirstShowKeyboard = YES;
         _isButtonClicked = NO;
         _textView.inputView = nil;
-        [_keyboardButton setImage:[UIImage imageNamed:@"emojiBoardBtn"]
+        [_keyboardButton setImage:[UIImage imageNamed:@"keyBoardBtn"]
                          forState:UIControlStateNormal];
     }
 }
@@ -214,10 +214,10 @@
     }
     
     if (_isKeyBoardShow ) {
-        [_keyboardButton setImage:[UIImage imageNamed:@"keyBoardBtn"]
+        [_keyboardButton setImage:[UIImage imageNamed:@"emojiBoardBtn"]
                          forState:UIControlStateNormal];
     } else {
-        [_keyboardButton setImage:[UIImage imageNamed:@"emojiBoardBtn"]
+        [_keyboardButton setImage:[UIImage imageNamed:@"keyBoardBtn"]
                          forState:UIControlStateNormal];
     }
 }
@@ -263,6 +263,10 @@
 - (void)textViewDidChange:(UITextView *)textView {
     [self barLayout];
     NSLog(@"textViewDidChange %@", textView.text);
+    
+}
+
+- (void)deleteBackward {
     
 }
 
