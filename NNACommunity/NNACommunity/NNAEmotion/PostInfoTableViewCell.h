@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserInfoView.h"
 
 @interface PostInfoTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) UserInfoView *userV;
+@property (nonatomic, assign) CGFloat cellH;
+
+- (void)setFloorNumber:(NSInteger)row;
+- (CGFloat)setReplyText:(NSString *)text;
 
 @end

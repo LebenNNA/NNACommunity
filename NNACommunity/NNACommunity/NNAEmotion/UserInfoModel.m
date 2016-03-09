@@ -20,7 +20,7 @@
         _isMall = YES;
     } else {
         _Name = @"夜踹寡妇门";
-        _Head = @"headPic@";
+        _Head = @"headPic";
         _Level = @"LV10";
         _Date = @"2016-11-11";
         _Place = @"北京市";

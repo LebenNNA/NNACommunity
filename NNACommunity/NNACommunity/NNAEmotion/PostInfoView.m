@@ -70,13 +70,13 @@
     UserInfoModel *model = [[UserInfoModel alloc]initWithIsMaster:YES];
     [_userV setUserInfoWithModel:model];
     
-    _titleL.text = @"【嘿嘿，夜深人静[淫笑]】";
+    _titleL.text = @"嘿嘿，夜深人静[淫笑]";
     CGSize tH = [self stringLabelRectWithFont:[UIFont systemFontOfSize:30] textString:_titleL.text width:SCREEN_W-20];
     [_titleL mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(tH.height);
     }];
     
-    NSString *text = @"对潇潇暮雨洒江天，一番洗清秋。\n[微笑]渐霜风凄紧，关河冷落，残照当楼。\n[微笑]是处红衰翠减，苒苒物华休。惟有长江水，无语东流。不忍登高临远，望故乡渺邈，归思难收。\n[微笑] 叹年来踪迹，何事苦淹留。[微笑] 想佳人、妆楼颙望，误几回、天际识归舟。争知我、倚阑干处，正恁凝愁 [微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑]";
+    NSString *text = @"对潇潇暮雨洒江天，一番洗清秋。\n[微笑]渐霜风凄紧，关河冷落，残照当楼。\n[微笑]是处红衰翠减，苒苒物华休。\n惟有长江水，无语东流。不忍登高临远，望故乡渺邈，归思难收。\n[微笑] 叹年来踪迹，何事苦淹留。[微笑] 想佳人、妆楼颙望，误几回、天际识归舟。争知我、倚阑干处，正恁凝愁 [微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑]";
     _infoL.text = text;
     
     CGSize iH = [self getAttributeSizeWithString:text width:SCREEN_W-20 font:_infoL.font];
