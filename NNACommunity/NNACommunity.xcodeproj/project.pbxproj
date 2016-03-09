@@ -10,6 +10,10 @@
 		0BF45EE9981893A7A9537339 /* libPods-NNACommunity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB7B69EE6CC1EA1023FE250 /* libPods-NNACommunity.a */; };
 		48AA39501C8F25A5006EE079 /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AA394F1C8F25A5006EE079 /* UserInfoView.m */; };
 		48AA39531C8F2F04006EE079 /* PostInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AA39521C8F2F04006EE079 /* PostInfoView.m */; };
+		842113131C8FD1EC003D5714 /* KKKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842113121C8FD1EC003D5714 /* KKKViewController.m */; };
+		842113161C901C70003D5714 /* PostInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842113151C901C70003D5714 /* PostInfoTableViewCell.m */; };
+		842113181C902529003D5714 /* headPic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842113171C902529003D5714 /* headPic@2x.png */; };
+		8421131E1C9025A3003D5714 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421131D1C9025A3003D5714 /* UserInfoModel.m */; };
 		8427B31D1C86EDF4000ABA07 /* deleteEmoji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B2321C86EDF4000ABA07 /* deleteEmoji@2x.png */; };
 		8427B31E1C86EDF4000ABA07 /* deleteEmoji_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B2331C86EDF4000ABA07 /* deleteEmoji_hl@2x.png */; };
 		8427B31F1C86EDF4000ABA07 /* emoji_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 8427B2351C86EDF4000ABA07 /* emoji_001.png */; };
@@ -291,6 +295,13 @@
 		48AA39521C8F2F04006EE079 /* PostInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInfoView.m; sourceTree = "<group>"; };
 		4FDB5B361ECD53804C7BF8F3 /* Pods-NNACommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNACommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NNACommunity/Pods-NNACommunity.debug.xcconfig"; sourceTree = "<group>"; };
 		7276CD9AE29897E3EFB13172 /* Pods-NNACommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNACommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-NNACommunity/Pods-NNACommunity.release.xcconfig"; sourceTree = "<group>"; };
+		842113111C8FD1EC003D5714 /* KKKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKKViewController.h; sourceTree = "<group>"; };
+		842113121C8FD1EC003D5714 /* KKKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKKViewController.m; sourceTree = "<group>"; };
+		842113141C901C70003D5714 /* PostInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfoTableViewCell.h; sourceTree = "<group>"; };
+		842113151C901C70003D5714 /* PostInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInfoTableViewCell.m; sourceTree = "<group>"; };
+		842113171C902529003D5714 /* headPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headPic@2x.png"; sourceTree = "<group>"; };
+		8421131C1C9025A3003D5714 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		8421131D1C9025A3003D5714 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		8427B1A71C86BF08000ABA07 /* NNAEmoUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNAEmoUnit.h; sourceTree = "<group>"; };
 		8427B2321C86EDF4000ABA07 /* deleteEmoji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteEmoji@2x.png"; sourceTree = "<group>"; };
 		8427B2331C86EDF4000ABA07 /* deleteEmoji_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteEmoji_hl@2x.png"; sourceTree = "<group>"; };
@@ -602,10 +613,14 @@
 		48AA394D1C8F2535006EE079 /* PostDetailPage */ = {
 			isa = PBXGroup;
 			children = (
+				8421131C1C9025A3003D5714 /* UserInfoModel.h */,
+				8421131D1C9025A3003D5714 /* UserInfoModel.m */,
 				48AA394E1C8F25A5006EE079 /* UserInfoView.h */,
 				48AA394F1C8F25A5006EE079 /* UserInfoView.m */,
 				48AA39511C8F2F04006EE079 /* PostInfoView.h */,
 				48AA39521C8F2F04006EE079 /* PostInfoView.m */,
+				842113141C901C70003D5714 /* PostInfoTableViewCell.h */,
+				842113151C901C70003D5714 /* PostInfoTableViewCell.m */,
 			);
 			name = PostDetailPage;
 			path = NNAEmotion;
@@ -637,6 +652,7 @@
 		8427B2311C86EDF4000ABA07 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				842113171C902529003D5714 /* headPic@2x.png */,
 				8427B2321C86EDF4000ABA07 /* deleteEmoji@2x.png */,
 				8427B2331C86EDF4000ABA07 /* deleteEmoji_hl@2x.png */,
 				8427B26A1C86EDF4000ABA07 /* emojiBoardBtn@2x.png */,
@@ -967,6 +983,8 @@
 				849AE46D1C859F57000F9337 /* KBViewController.m */,
 				846926EA1C8822B800A4B0BB /* NKBViewController.h */,
 				846926EB1C8822B800A4B0BB /* NKBViewController.m */,
+				842113111C8FD1EC003D5714 /* KKKViewController.h */,
+				842113121C8FD1EC003D5714 /* KKKViewController.m */,
 				849AE46F1C859F57000F9337 /* Main.storyboard */,
 				849AE4751C859F57000F9337 /* Assets.xcassets */,
 				849AE4771C859F57000F9337 /* LaunchScreen.storyboard */,
@@ -1210,6 +1228,7 @@
 				8427B36C1C86EDF4000ABA07 /* 012.png in Resources */,
 				8427B35F1C86EDF4000ABA07 /* 005@2x.png in Resources */,
 				8427B3F81C86EDF4000ABA07 /* 082.png in Resources */,
+				842113181C902529003D5714 /* headPic@2x.png in Resources */,
 				8427B3391C86EDF4000ABA07 /* emoji_027.png in Resources */,
 				8427B3401C86EDF4000ABA07 /* emoji_034.png in Resources */,
 				8427B3A31C86EDF4000ABA07 /* 039@2x.png in Resources */,
@@ -1435,9 +1454,12 @@
 				844D0CB51C89820000869FC2 /* EMStringStylingConfiguration.m in Sources */,
 				846926E61C87DD3900A4B0BB /* ViewController.m in Sources */,
 				8427B4081C86EE72000ABA07 /* NNAEmoBoard.m in Sources */,
+				842113161C901C70003D5714 /* PostInfoTableViewCell.m in Sources */,
 				849AE46E1C859F57000F9337 /* KBViewController.m in Sources */,
+				842113131C8FD1EC003D5714 /* KKKViewController.m in Sources */,
 				48AA39501C8F25A5006EE079 /* UserInfoView.m in Sources */,
 				844D0CA51C897FDA00869FC2 /* FontAwesome.m in Sources */,
+				8421131E1C9025A3003D5714 /* UserInfoModel.m in Sources */,
 				48AA39531C8F2F04006EE079 /* PostInfoView.m in Sources */,
 				844D0CB71C89820000869FC2 /* NSString+EMAdditions.m in Sources */,
 				844D0CA81C897FDA00869FC2 /* SJEmojiLabel.m in Sources */,

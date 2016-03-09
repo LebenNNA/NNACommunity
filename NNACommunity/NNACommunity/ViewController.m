@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "KBViewController.h"
 #import "NKBViewController.h"
+#import "KKKViewController.h"
 
 @interface ViewController ()
 
@@ -18,19 +19,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 150, 100, 100)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 150, 100, 30)];
     [btn setTitle:@"push" forState:UIControlStateNormal];
     [btn setBackgroundColor:[UIColor blueColor]];
     [btn setTag:1001];
     [btn addTarget:self action:@selector(pushAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(50, 300, 100, 100)];
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(50, 200, 100, 30)];
     [btn1 setTitle:@"push1" forState:UIControlStateNormal];
     [btn1 setBackgroundColor:[UIColor blueColor]];
     [btn1 setTag:1002];
     [btn1 addTarget:self action:@selector(pushAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn1];
+    
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(50, 250, 100, 30)];
+    [btn2 setTitle:@"push2" forState:UIControlStateNormal];
+    [btn2 setBackgroundColor:[UIColor blueColor]];
+    [btn2 setTag:1003];
+    [btn2 addTarget:self action:@selector(pushAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn2];
 }
 
 - (void)pushAction:(UIButton *)sender {
@@ -40,6 +48,9 @@
     } else if (sender.tag == 1002) {
         NKBViewController *nkbVC = [[NKBViewController alloc] init];
         [self.navigationController pushViewController:nkbVC animated:YES];
+    } else if (sender.tag == 1003) {
+        KKKViewController *kkkVC = [[KKKViewController alloc] init];
+        [self.navigationController pushViewController:kkkVC animated:YES];
     }
     
 }

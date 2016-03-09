@@ -13,4 +13,6 @@
 
 @interface PostInfoView : UIView
 
+- (CGFloat)setText;
+
 @end

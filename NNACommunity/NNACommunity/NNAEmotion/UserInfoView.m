@@ -13,14 +13,6 @@
 
 @interface UserInfoView ()
 
-@property (nonatomic, strong) UIImageView *headIV;
-@property (nonatomic, strong) UILabel *nameL;
-@property (nonatomic, strong) UILabel *lvL;
-@property (nonatomic, strong) UILabel *masterL;
-@property (nonatomic, strong) UILabel *dateL;
-@property (nonatomic, strong) UILabel *cityL;
-@property (nonatomic, strong) UILabel *floorL;
-
 @end
 
 @implementation UserInfoView
@@ -35,9 +27,11 @@
         [self addSubview:_nameL];
         
         _lvL = [UILabel new];
+        [_lvL setTextColor:[UIColor whiteColor]];
         [self addSubview:_lvL];
         
         _masterL = [UILabel new];
+        [_masterL setBackgroundColor:[UIColor orangeColor]];
         [self addSubview:_masterL];
         
         _dateL = [UILabel new];
@@ -81,17 +75,37 @@
     }];
     
     [_dateL mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_nameL);
+        make.top.equalTo(_nameL.mas_bottom);
         make.left.equalTo(_headIV.mas_right).with.offset(HeadIV_Margin_t);
         make.height.equalTo(_nameL);
     }];
     
     [_cityL mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_nameL);
-        make.left.equalTo(_headIV.mas_right).with.offset(HeadIV_Margin_t);
+        make.top.equalTo(_nameL.mas_bottom);
+        make.left.equalTo(_dateL.mas_right).with.offset(HeadIV_Margin_t);
         make.height.equalTo(_nameL);
     }];
 
+}
+
+- (void)setUserInfoWithModel:(UserInfoModel *)model {
+    [_headIV setImage:[UIImage imageNamed:model.Head]];
+    [_nameL setText:model.Name];
+    if (model.isMall) {
+        [_lvL setBackgroundColor:[UIColor blueColor]];
+    } else {
+        [_lvL setBackgroundColor:[UIColor purpleColor]];
+    }
+    [_lvL setText:model.Level];
+    if (model.isMaster) {
+        [_masterL setText:@"楼主"];
+    } else {
+        [_masterL mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(0);
+        }];
+    }
+    [_dateL setText:model.Date];
+    [_cityL setText:model.Place];
 }
 
 @end
