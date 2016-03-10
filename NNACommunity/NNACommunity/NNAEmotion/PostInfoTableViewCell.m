@@ -56,7 +56,8 @@
         make.top.equalTo(_userV.mas_bottom);
         make.left.equalTo(self.contentView).with.offset(60);
         make.bottom.equalTo(self.contentView).with.offset(-10);
-        make.width.mas_equalTo(SCREEN_W-70);
+        make.right.equalTo(self.contentView).with.offset(-10);
+//        make.width.mas_equalTo(SCREEN_W-70);
     }];
 }
 
@@ -64,8 +65,10 @@
     [_floorL setText:[NSString stringWithFormat:@"%ldF", (long)row]];
 }
 
+
 - (void)setReplyText:(NSString *)text {
     _replyL.text = text;
+    [self layoutIfNeeded];
 //    CGFloat replyH = [self getAttributeSizeWithString:text width:SCREEN_W-70 font:_replyL.font].height;
 //    [_replyL mas_updateConstraints:^(MASConstraintMaker *make) {
 //        make.height.mas_equalTo(replyH);
