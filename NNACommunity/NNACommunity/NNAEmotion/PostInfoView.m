@@ -12,7 +12,9 @@
 #define UserV_h 60
 #define TitleL_Margin_t 10
 
-@interface PostInfoView ()
+@interface PostInfoView () {
+    float HH;
+}
 
 @property (nonatomic, strong) UserInfoView *userV;
 @property (nonatomic, strong) SJEmojiLabel *titleL;
@@ -83,9 +85,24 @@
     [_infoL mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(iH.height);
     }];
+    HH = (tH.height+iH.height+UserV_h+3*TitleL_Margin_t);
     
-    return (tH.height+iH.height+UserV_h+3*TitleL_Margin_t);
+    return HH;
 
+}
+
+- (CGFloat)setImagesWithArray:(NSArray *)array {
+    if (array.count>0) {
+        [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            UIImageView *picIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, HH, SCREEN_W, 100)];
+//            picIV.contentMode = UIViewContentModeScaleAspectFit;
+            HH += 110;
+            [self addSubview:picIV];
+            [picIV setImage:[UIImage imageNamed:array[idx]]];
+        }];
+
+    }
+    return HH;
 }
 
 - (CGSize)stringLabelRectWithFont:(UIFont *)font textString:(NSString *)string width:(CGFloat)width {

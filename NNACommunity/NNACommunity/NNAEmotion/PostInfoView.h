@@ -14,5 +14,6 @@
 @interface PostInfoView : UIView
 
 - (CGFloat)setText;
+- (CGFloat)setImagesWithArray:(NSArray *)array;
 
 @end

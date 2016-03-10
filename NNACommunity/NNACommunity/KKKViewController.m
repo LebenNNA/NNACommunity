@@ -16,6 +16,7 @@
     NNAEmoInputBar *_inputBar;
     PostInfoView *_postView;
     NSMutableArray *_replyArr;
+    NSArray *_replyArr1;
 }
 
 @end
@@ -26,6 +27,7 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     _replyArr = [[NSMutableArray alloc]initWithCapacity:0];
+    _replyArr1 = [[NSArray alloc]init];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self layoutTableView];
     [self layoutInputBar];
@@ -64,6 +66,8 @@
 - (void)layoutPostInfoView {
     _postView = [[PostInfoView alloc] init];
     CGFloat height = [_postView setText];
+    NSArray *imgArr = [[NSArray alloc] initWithObjects:@"hzw1@2x.jpg", @"hzw2@2x.jpg", @"hzw3@2x.jpg", nil];
+    height = [_postView setImagesWithArray:imgArr];
     [_postView setFrame:CGRectMake(0, 0, SCREEN_W, height)];
     _table.tableHeaderView = _postView;
 //    [_table.tableHeaderView setBackgroundColor:[UIColor yellowColor]];
@@ -73,9 +77,17 @@
 - (void)loadDate {
     NSInteger i = 0;
     while (i<5) {
-        [_replyArr addObject:@"我是谁：对酒当歌[大兵],人生几何[微笑]。"];
         i++;
+        NSString *string = @"我是谁：";
+        NSInteger n = i;
+        while (n>0) {
+            n--;
+            string = [NSString stringWithFormat:@"%@对酒当歌，人生几何。", string];
+        }
+        [_replyArr addObject:string];
     }
+    _replyArr1 = @[@"小王：借楼！！！", @"小李：借楼！！！", @"小东：再借楼！！！！！！！！！！！！！！！！！！！！！！[微笑]"];
+    
     [_table reloadData];
 }
 
@@ -111,7 +123,7 @@
     [sectionV setBackgroundColor:[UIColor grayColor]];
     UILabel *sectionL = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, SCREEN_W-20, 30)];
     [sectionL setBackgroundColor:[UIColor clearColor]];
-    [sectionL setText:[NSString stringWithFormat:@"回帖（%u）", (10+_replyArr.count)]];
+    [sectionL setText:[NSString stringWithFormat:@"回帖（%lu）", (_replyArr.count)]];
     [sectionV addSubview:sectionL];
     return sectionV;
 }
@@ -135,7 +147,7 @@
     [cell.userV setUserInfoWithModel:model];
     [cell.userV.cityL setHidden:YES];
     [cell setFloorNumber:indexPath.row+1];
-    [cell setReplyText: _replyArr[indexPath.row]];
+    [cell setReplyText:_replyArr[indexPath.row] replyArr:_replyArr1];
     
 //    [cell setBackgroundColor:[UIColor orangeColor]];
     return cell;
