@@ -35,6 +35,7 @@
         
         _replyL = [SJEmojiLabel new];
         _replyL.font = [UIFont systemFontOfSize:15];
+        _replyL.numberOfLines = 0;
 //        [_replyL setBackgroundColor:[UIColor redColor]];
         [self.contentView addSubview:_replyL];
         
@@ -44,6 +45,7 @@
 }
 
 - (void)layoutPageSubviews {
+    
     [_floorL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).with.offset(10);
         make.right.equalTo(self.contentView).with.offset(-10);
@@ -53,6 +55,7 @@
     [_replyL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_userV.mas_bottom);
         make.left.equalTo(self.contentView).with.offset(60);
+        make.bottom.equalTo(self.contentView).with.offset(-10);
         make.width.mas_equalTo(SCREEN_W-70);
     }];
 }
@@ -61,14 +64,14 @@
     [_floorL setText:[NSString stringWithFormat:@"%ldF", (long)row]];
 }
 
-- (CGFloat)setReplyText:(NSString *)text {
+- (void)setReplyText:(NSString *)text {
     _replyL.text = text;
-    CGFloat replyH = [self getAttributeSizeWithString:text width:SCREEN_W-70 font:_replyL.font].height;
-    [_replyL mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(replyH);
-    }];
-    _cellH += replyH + 10;
-    return _cellH;
+//    CGFloat replyH = [self getAttributeSizeWithString:text width:SCREEN_W-70 font:_replyL.font].height;
+//    [_replyL mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.height.mas_equalTo(replyH);
+//    }];
+//    _cellH += replyH + 10;
+//    return _cellH;
     
 }
 

@@ -15,6 +15,6 @@
 @property (nonatomic, assign) CGFloat cellH;
 
 - (void)setFloorNumber:(NSInteger)row;
-- (CGFloat)setReplyText:(NSString *)text;
+- (void)setReplyText:(NSString *)text;
 
 @end

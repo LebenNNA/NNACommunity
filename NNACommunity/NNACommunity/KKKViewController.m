@@ -26,12 +26,13 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     _replyArr = [[NSMutableArray alloc]initWithCapacity:0];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self layoutTableView];
     [self layoutInputBar];
     [self layoutPostInfoView];
+    [self loadDate];
     
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -48,12 +49,14 @@
 }
 
 - (void)layoutTableView {
-    _table = [[UITableView alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.view.bounds), CGRectGetMinY(self.view.bounds), SCREEN_W, CGRectGetHeight(self.view.bounds)-44)];//44是inputview高度
+    _table = [[UITableView alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.view.bounds), 64, SCREEN_W, CGRectGetHeight(self.view.bounds)-108)];//44是inputview高度
     [self.view addSubview:_table];
 //    [_table setBackgroundColor:[UIColor redColor]];
     _table.dataSource = self;
     _table.delegate = self;
     _table.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    _table.estimatedRowHeight = 44.0f;
+    _table.rowHeight = UITableViewAutomaticDimension;
 
 }
 
@@ -67,8 +70,17 @@
     
 }
 
+- (void)loadDate {
+    NSInteger i = 0;
+    while (i<5) {
+        [_replyArr addObject:@"我是谁：对酒当歌[大兵],人生几何[微笑]。"];
+        i++;
+    }
+    [_table reloadData];
+}
+
 - (void)sendAction:(NSString *)text {
-    [_replyArr addObject:text];
+    [_replyArr addObject:[NSString stringWithFormat:@"我的回复：%@", text]];
     [_table reloadData];
 }
 
@@ -87,11 +99,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (_replyArr.count == 0) {
-        return 10;
-    } else {
-        return (_replyArr.count + 10);
-    }
+    return _replyArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -103,14 +111,14 @@
     [sectionV setBackgroundColor:[UIColor grayColor]];
     UILabel *sectionL = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, SCREEN_W-20, 30)];
     [sectionL setBackgroundColor:[UIColor clearColor]];
-    [sectionL setText:[NSString stringWithFormat:@"回帖（%lu）", (10+_replyArr.count)]];
+    [sectionL setText:[NSString stringWithFormat:@"回帖（%u）", (10+_replyArr.count)]];
     [sectionV addSubview:sectionL];
     return sectionV;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 100;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -127,13 +135,7 @@
     [cell.userV setUserInfoWithModel:model];
     [cell.userV.cityL setHidden:YES];
     [cell setFloorNumber:indexPath.row+1];
-    if (indexPath.row<10) {
-        [cell setReplyText:@"我是谁：对酒当歌[大兵],人生几何[微笑]。"];
-
-    } else {
-        [cell setReplyText:[NSString stringWithFormat:@"我的回复：%@", _replyArr[indexPath.row-10]]];
-
-    }
+    [cell setReplyText: _replyArr[indexPath.row]];
     
 //    [cell setBackgroundColor:[UIColor orangeColor]];
     return cell;
