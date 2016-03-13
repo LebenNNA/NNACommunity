@@ -1,21 +1,28 @@
 //
-//  UserInfoView.m
+//  ReplyUserInfoView.m
 //  NNACommunity
 //
-//  Created by Leben.NNA on 16/3/8.
+//  Created by Leben.NNA on 16/3/13.
 //  Copyright © 2016年 Leben.NNA. All rights reserved.
 //
 
-#import "UserInfoView.h"
+#import "ReplyUserInfoView.h"
 
 #define HeadIV_Margin_t 10
 #define HeadIV_w 40
 
-@interface UserInfoView ()
+@interface ReplyUserInfoView ()
+
+@property (nonatomic, strong) UIImageView *headIV;
+@property (nonatomic, strong) UILabel *nameL;
+@property (nonatomic, strong) UIImageView *genderIV;
+@property (nonatomic, strong) UILabel *masterL;
+@property (nonatomic, strong) UILabel *floorL;
+@property (nonatomic, strong) UILabel *dateL;
 
 @end
 
-@implementation UserInfoView
+@implementation ReplyUserInfoView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -26,22 +33,21 @@
         _nameL = [UILabel new];
         [self addSubview:_nameL];
         
-        _lvL = [UILabel new];
-        [_lvL setTextColor:[UIColor whiteColor]];
-        [self addSubview:_lvL];
+        _genderIV = [UIImageView new];
+        [self addSubview:_genderIV];
         
         _masterL = [UILabel new];
         [_masterL setBackgroundColor:[UIColor orangeColor]];
         [self addSubview:_masterL];
         
+        _floorL = [UILabel new];
+        [self addSubview:_floorL];
+        
         _dateL = [UILabel new];
         [self addSubview:_dateL];
         
-        _cityL = [UILabel new];
-        [self addSubview:_cityL];
-        
-        _floorL = [UILabel new];
-        [self addSubview:_floorL];
+        _irrigationBtn = [UIButton new];
+        [self addSubview:_irrigationBtn];
         
         [self layoutPageSubviews];
     }
@@ -62,7 +68,7 @@
         make.height.equalTo(_headIV).multipliedBy(0.5);
     }];
     
-    [_lvL mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_genderIV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).with.offset(HeadIV_Margin_t);
         make.left.equalTo(_nameL.mas_right).with.offset(HeadIV_Margin_t);
         make.height.equalTo(_nameL);
@@ -70,42 +76,39 @@
     
     [_masterL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).with.offset(HeadIV_Margin_t);
-        make.left.equalTo(_lvL.mas_right).with.offset(HeadIV_Margin_t);
+        make.left.equalTo(_genderIV.mas_right).with.offset(HeadIV_Margin_t);
         make.height.equalTo(_nameL);
     }];
     
-    [_dateL mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_floorL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_nameL.mas_bottom);
         make.left.equalTo(_headIV.mas_right).with.offset(HeadIV_Margin_t);
         make.height.equalTo(_nameL);
     }];
     
-    [_cityL mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_dateL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_nameL.mas_bottom);
-        make.left.equalTo(_dateL.mas_right).with.offset(HeadIV_Margin_t);
+        make.left.equalTo(_floorL.mas_right).with.offset(HeadIV_Margin_t);
         make.height.equalTo(_nameL);
     }];
-
+    
 }
 
 - (void)setUserInfoWithModel:(UserInfoModel *)model {
     [_headIV setImage:[UIImage imageNamed:model.Head]];
     [_nameL setText:model.Name];
     if (model.isMale) {
-        [_lvL setBackgroundColor:[UIColor blueColor]];
+        [_genderIV setImage:[UIImage imageNamed:@"Male"]];
     } else {
-        [_lvL setBackgroundColor:[UIColor purpleColor]];
+        [_genderIV setImage:[UIImage imageNamed:@"Female"]];
     }
-    [_lvL setText:model.Level];
-    if (model.isMaster) {
-        [_masterL setText:@"楼主"];
-    } else {
-        [_masterL mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(0);
-        }];
-    }
+    [_masterL setText:@"楼主"];
     [_dateL setText:model.Date];
-    [_cityL setText:model.Place];
 }
+
+- (void)setFloor:(NSInteger)floor {
+    [_floorL setText:[NSString stringWithFormat:@"%ldF", (long)floor]];
+}
+
 
 @end

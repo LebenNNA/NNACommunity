@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostReplyModel.h"
 
-@interface ReplyViewController : UIViewController
+@interface ReplyViewController : UIViewController 
+
+@property (nonatomic, strong) PostReplyModel *prM;
 
 @end

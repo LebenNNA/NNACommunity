@@ -17,7 +17,6 @@
 #define TEXTVIEW_MAX_HEIGHT 80
 
 @interface NNAEmoInputBar () <UITextViewDelegate, EmoBoardDelegate> {
-    UITextView *_textView;
     UIButton *_keyboardButton;
     UIButton *_sendButton;
     
@@ -225,11 +224,21 @@
 - (void)keyboardWillHide:(NSNotification *)notification {
     NSDictionary *userInfo = [notification userInfo];
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
+//    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+//    CGSize kbSize = [aValue CGRectValue].size;
     [UIView animateWithDuration:[userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue]
                           delay:0
                         options:([userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue]<<16)
                      animations:^{
                          self.center = CGPointMake(self.bounds.size.width/2.0f, height-CGRectGetHeight(self.frame)/2.0);
+
+//                         if (_isButtonClicked) {
+//                             CGRect newInputBarFrame = self.frame;
+//                             newInputBarFrame.origin.y = [UIScreen mainScreen].bounds.size.height-CGRectGetHeight(self.frame)-kbSize.height;
+//                             self.frame = newInputBarFrame;
+//                         } else {
+//                             
+//                         }
                      }
                      completion:nil];
 }

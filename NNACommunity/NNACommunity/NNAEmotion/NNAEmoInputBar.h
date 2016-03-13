@@ -13,11 +13,12 @@
 
 + (instancetype)inputBar;
 
-@property (assign, nonatomic) BOOL fitWhenKeyboardShowOrHide;
+@property (nonatomic, assign) BOOL fitWhenKeyboardShowOrHide;
 
 - (void)setDidSendClicked:(void(^)(NSString *text))handler;
 
-@property (copy, nonatomic) NSString *placeHolder;
+@property (nonatomic, copy) NSString *placeHolder;
+@property (nonatomic, strong)UITextView *textView;
 
 - (void)setInputBarSizeChangedHandle:(void(^)())handler;
 

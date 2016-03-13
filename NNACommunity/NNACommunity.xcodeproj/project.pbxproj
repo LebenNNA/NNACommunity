@@ -8,10 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0BF45EE9981893A7A9537339 /* libPods-NNACommunity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB7B69EE6CC1EA1023FE250 /* libPods-NNACommunity.a */; };
+		480F93761C9430D40089AF28 /* PostReplyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 480F93751C9430D40089AF28 /* PostReplyTableView.m */; };
+		480F937A1C9434570089AF28 /* PostReplyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 480F93791C9434570089AF28 /* PostReplyTableViewCell.m */; };
+		480F937D1C9439350089AF28 /* ReplyContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 480F937C1C9439350089AF28 /* ReplyContentModel.m */; };
+		4840283A1C94790E00A77A40 /* ReplyUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 484028391C94790E00A77A40 /* ReplyUserInfoView.m */; };
+		4840283D1C947FAA00A77A40 /* ReplyDetailInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4840283C1C947FAA00A77A40 /* ReplyDetailInfoView.m */; };
+		4840283F1C950B3D00A77A40 /* Post.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4840283E1C950B3D00A77A40 /* Post.plist */; };
+		484028421C95135000A77A40 /* PostInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 484028411C95135000A77A40 /* PostInfoModel.m */; };
+		4840284B1C9569B500A77A40 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 484028451C9569B500A77A40 /* SDBrowserImageView.m */; };
+		4840284C1C9569B500A77A40 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 484028471C9569B500A77A40 /* SDPhotoBrowser.m */; };
+		4840284D1C9569B500A77A40 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4840284A1C9569B500A77A40 /* SDWaitingView.m */; };
 		484F61DE1C91B65A0009B725 /* hzw3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 484F61DB1C91B65A0009B725 /* hzw3@2x.jpg */; };
 		484F61DF1C91B65A0009B725 /* hzw2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 484F61DC1C91B65A0009B725 /* hzw2@2x.jpg */; };
 		484F61E01C91B65A0009B725 /* hzw1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 484F61DD1C91B65A0009B725 /* hzw1@2x.jpg */; };
 		484F61E31C91CB750009B725 /* ReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484F61E21C91CB750009B725 /* ReplyViewController.m */; };
+		485A86E61C93E45A0062BA73 /* PostReplyInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A86E51C93E45A0062BA73 /* PostReplyInfoView.m */; };
+		485A86EC1C93EF830062BA73 /* PostReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A86EB1C93EF830062BA73 /* PostReplyModel.m */; };
 		48AA39501C8F25A5006EE079 /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AA394F1C8F25A5006EE079 /* UserInfoView.m */; };
 		48AA39531C8F2F04006EE079 /* PostInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AA39521C8F2F04006EE079 /* PostInfoView.m */; };
 		842113131C8FD1EC003D5714 /* KKKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842113121C8FD1EC003D5714 /* KKKViewController.m */; };
@@ -263,10 +275,8 @@
 		844D0CB71C89820000869FC2 /* NSString+EMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D0CB31C89820000869FC2 /* NSString+EMAdditions.m */; };
 		846926E61C87DD3900A4B0BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926E51C87DD3900A4B0BB /* ViewController.m */; };
 		846926E91C87EF2B00A4B0BB /* NNAEmoInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926E81C87EF2B00A4B0BB /* NNAEmoInputBar.m */; };
-		846926EC1C8822B800A4B0BB /* NKBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846926EB1C8822B800A4B0BB /* NKBViewController.m */; };
 		849AE4681C859F57000F9337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4671C859F57000F9337 /* main.m */; };
 		849AE46B1C859F57000F9337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46A1C859F57000F9337 /* AppDelegate.m */; };
-		849AE46E1C859F57000F9337 /* KBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AE46D1C859F57000F9337 /* KBViewController.m */; };
 		849AE4711C859F57000F9337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AE46F1C859F57000F9337 /* Main.storyboard */; };
 		849AE4741C859F57000F9337 /* NNACommunity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 849AE4721C859F57000F9337 /* NNACommunity.xcdatamodeld */; };
 		849AE4761C859F57000F9337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849AE4751C859F57000F9337 /* Assets.xcassets */; };
@@ -293,11 +303,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		480F93741C9430D40089AF28 /* PostReplyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReplyTableView.h; sourceTree = "<group>"; };
+		480F93751C9430D40089AF28 /* PostReplyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReplyTableView.m; sourceTree = "<group>"; };
+		480F93781C9434570089AF28 /* PostReplyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReplyTableViewCell.h; sourceTree = "<group>"; };
+		480F93791C9434570089AF28 /* PostReplyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReplyTableViewCell.m; sourceTree = "<group>"; };
+		480F937B1C9439350089AF28 /* ReplyContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyContentModel.h; sourceTree = "<group>"; };
+		480F937C1C9439350089AF28 /* ReplyContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyContentModel.m; sourceTree = "<group>"; };
+		484028381C94790E00A77A40 /* ReplyUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyUserInfoView.h; sourceTree = "<group>"; };
+		484028391C94790E00A77A40 /* ReplyUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyUserInfoView.m; sourceTree = "<group>"; };
+		4840283B1C947FAA00A77A40 /* ReplyDetailInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyDetailInfoView.h; sourceTree = "<group>"; };
+		4840283C1C947FAA00A77A40 /* ReplyDetailInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyDetailInfoView.m; sourceTree = "<group>"; };
+		4840283E1C950B3D00A77A40 /* Post.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Post.plist; sourceTree = "<group>"; };
+		484028401C95135000A77A40 /* PostInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfoModel.h; sourceTree = "<group>"; };
+		484028411C95135000A77A40 /* PostInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInfoModel.m; sourceTree = "<group>"; };
+		484028441C9569B500A77A40 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		484028451C9569B500A77A40 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		484028461C9569B500A77A40 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		484028471C9569B500A77A40 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		484028481C9569B500A77A40 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		484028491C9569B500A77A40 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		4840284A1C9569B500A77A40 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		484F61DB1C91B65A0009B725 /* hzw3@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hzw3@2x.jpg"; sourceTree = "<group>"; };
 		484F61DC1C91B65A0009B725 /* hzw2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hzw2@2x.jpg"; sourceTree = "<group>"; };
 		484F61DD1C91B65A0009B725 /* hzw1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hzw1@2x.jpg"; sourceTree = "<group>"; };
 		484F61E11C91CB750009B725 /* ReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyViewController.h; sourceTree = "<group>"; };
 		484F61E21C91CB750009B725 /* ReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyViewController.m; sourceTree = "<group>"; };
+		485A86E41C93E45A0062BA73 /* PostReplyInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReplyInfoView.h; sourceTree = "<group>"; };
+		485A86E51C93E45A0062BA73 /* PostReplyInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReplyInfoView.m; sourceTree = "<group>"; };
+		485A86EA1C93EF830062BA73 /* PostReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReplyModel.h; sourceTree = "<group>"; };
+		485A86EB1C93EF830062BA73 /* PostReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReplyModel.m; sourceTree = "<group>"; };
 		48AA394E1C8F25A5006EE079 /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		48AA394F1C8F25A5006EE079 /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
 		48AA39511C8F2F04006EE079 /* PostInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfoView.h; sourceTree = "<group>"; };
@@ -571,14 +605,10 @@
 		846926E51C87DD3900A4B0BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		846926E71C87EF2B00A4B0BB /* NNAEmoInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAEmoInputBar.h; sourceTree = "<group>"; };
 		846926E81C87EF2B00A4B0BB /* NNAEmoInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAEmoInputBar.m; sourceTree = "<group>"; };
-		846926EA1C8822B800A4B0BB /* NKBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKBViewController.h; sourceTree = "<group>"; };
-		846926EB1C8822B800A4B0BB /* NKBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKBViewController.m; sourceTree = "<group>"; };
 		849AE4631C859F57000F9337 /* NNACommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNACommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849AE4671C859F57000F9337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		849AE4691C859F57000F9337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		849AE46A1C859F57000F9337 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		849AE46C1C859F57000F9337 /* KBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBViewController.h; sourceTree = "<group>"; };
-		849AE46D1C859F57000F9337 /* KBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBViewController.m; sourceTree = "<group>"; };
 		849AE4701C859F57000F9337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849AE4731C859F57000F9337 /* NNACommunity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NNACommunity.xcdatamodel; sourceTree = "<group>"; };
 		849AE4751C859F57000F9337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -619,17 +649,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		480F93771C94320A0089AF28 /* OLD */ = {
+			isa = PBXGroup;
+			children = (
+				48AA39511C8F2F04006EE079 /* PostInfoView.h */,
+				48AA39521C8F2F04006EE079 /* PostInfoView.m */,
+				485A86E41C93E45A0062BA73 /* PostReplyInfoView.h */,
+				485A86E51C93E45A0062BA73 /* PostReplyInfoView.m */,
+				842113141C901C70003D5714 /* PostInfoTableViewCell.h */,
+				842113151C901C70003D5714 /* PostInfoTableViewCell.m */,
+			);
+			name = OLD;
+			sourceTree = "<group>";
+		};
+		484028431C9569B500A77A40 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				484028441C9569B500A77A40 /* SDBrowserImageView.h */,
+				484028451C9569B500A77A40 /* SDBrowserImageView.m */,
+				484028461C9569B500A77A40 /* SDPhotoBrowser.h */,
+				484028471C9569B500A77A40 /* SDPhotoBrowser.m */,
+				484028481C9569B500A77A40 /* SDPhotoBrowserConfig.h */,
+				484028491C9569B500A77A40 /* SDWaitingView.h */,
+				4840284A1C9569B500A77A40 /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		48AA394D1C8F2535006EE079 /* PostDetailPage */ = {
 			isa = PBXGroup;
 			children = (
+				480F93771C94320A0089AF28 /* OLD */,
+				484028401C95135000A77A40 /* PostInfoModel.h */,
+				484028411C95135000A77A40 /* PostInfoModel.m */,
 				8421131C1C9025A3003D5714 /* UserInfoModel.h */,
 				8421131D1C9025A3003D5714 /* UserInfoModel.m */,
+				485A86EA1C93EF830062BA73 /* PostReplyModel.h */,
+				485A86EB1C93EF830062BA73 /* PostReplyModel.m */,
+				480F937B1C9439350089AF28 /* ReplyContentModel.h */,
+				480F937C1C9439350089AF28 /* ReplyContentModel.m */,
 				48AA394E1C8F25A5006EE079 /* UserInfoView.h */,
 				48AA394F1C8F25A5006EE079 /* UserInfoView.m */,
-				48AA39511C8F2F04006EE079 /* PostInfoView.h */,
-				48AA39521C8F2F04006EE079 /* PostInfoView.m */,
-				842113141C901C70003D5714 /* PostInfoTableViewCell.h */,
-				842113151C901C70003D5714 /* PostInfoTableViewCell.m */,
+				484028381C94790E00A77A40 /* ReplyUserInfoView.h */,
+				484028391C94790E00A77A40 /* ReplyUserInfoView.m */,
+				4840283B1C947FAA00A77A40 /* ReplyDetailInfoView.h */,
+				4840283C1C947FAA00A77A40 /* ReplyDetailInfoView.m */,
+				480F93741C9430D40089AF28 /* PostReplyTableView.h */,
+				480F93751C9430D40089AF28 /* PostReplyTableView.m */,
+				480F93781C9434570089AF28 /* PostReplyTableViewCell.h */,
+				480F93791C9434570089AF28 /* PostReplyTableViewCell.m */,
+				4840283E1C950B3D00A77A40 /* Post.plist */,
 			);
 			name = PostDetailPage;
 			path = NNAEmotion;
@@ -982,6 +1051,7 @@
 		849AE4651C859F57000F9337 /* NNACommunity */ = {
 			isa = PBXGroup;
 			children = (
+				484028431C9569B500A77A40 /* SDPhotoBrowser */,
 				844D0CAB1C89820000869FC2 /* EMString */,
 				844D0C971C897FDA00869FC2 /* FontAwesome */,
 				844D0C9C1C897FDA00869FC2 /* SJRichLabel */,
@@ -991,10 +1061,6 @@
 				849AE46A1C859F57000F9337 /* AppDelegate.m */,
 				846926E41C87DD3900A4B0BB /* ViewController.h */,
 				846926E51C87DD3900A4B0BB /* ViewController.m */,
-				849AE46C1C859F57000F9337 /* KBViewController.h */,
-				849AE46D1C859F57000F9337 /* KBViewController.m */,
-				846926EA1C8822B800A4B0BB /* NKBViewController.h */,
-				846926EB1C8822B800A4B0BB /* NKBViewController.m */,
 				842113111C8FD1EC003D5714 /* KKKViewController.h */,
 				842113121C8FD1EC003D5714 /* KKKViewController.m */,
 				484F61E11C91CB750009B725 /* ReplyViewController.h */,
@@ -1227,6 +1293,7 @@
 				8427B32B1C86EDF4000ABA07 /* emoji_013.png in Resources */,
 				8427B3FB1C86EDF4000ABA07 /* 083@2x.png in Resources */,
 				8427B3D21C86EDF4000ABA07 /* 063.png in Resources */,
+				4840283F1C950B3D00A77A40 /* Post.plist in Resources */,
 				8427B3291C86EDF4000ABA07 /* emoji_011.png in Resources */,
 				8427B39D1C86EDF4000ABA07 /* 036@2x.png in Resources */,
 				8427B3471C86EDF4000ABA07 /* emoji_041.png in Resources */,
@@ -1465,20 +1532,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				844D0CA71C897FDA00869FC2 /* MLEmojiLabel.m in Sources */,
-				846926EC1C8822B800A4B0BB /* NKBViewController.m in Sources */,
 				844D0CA91C897FDA00869FC2 /* SJRichLabel.m in Sources */,
+				480F937D1C9439350089AF28 /* ReplyContentModel.m in Sources */,
 				484F61E31C91CB750009B725 /* ReplyViewController.m in Sources */,
 				844D0CAA1C897FDA00869FC2 /* TTTAttributedLabel.m in Sources */,
+				4840283A1C94790E00A77A40 /* ReplyUserInfoView.m in Sources */,
+				485A86E61C93E45A0062BA73 /* PostReplyInfoView.m in Sources */,
 				844D0CB51C89820000869FC2 /* EMStringStylingConfiguration.m in Sources */,
+				4840284D1C9569B500A77A40 /* SDWaitingView.m in Sources */,
 				846926E61C87DD3900A4B0BB /* ViewController.m in Sources */,
+				4840284B1C9569B500A77A40 /* SDBrowserImageView.m in Sources */,
 				8427B4081C86EE72000ABA07 /* NNAEmoBoard.m in Sources */,
 				842113161C901C70003D5714 /* PostInfoTableViewCell.m in Sources */,
-				849AE46E1C859F57000F9337 /* KBViewController.m in Sources */,
+				484028421C95135000A77A40 /* PostInfoModel.m in Sources */,
+				480F93761C9430D40089AF28 /* PostReplyTableView.m in Sources */,
 				842113131C8FD1EC003D5714 /* KKKViewController.m in Sources */,
+				4840283D1C947FAA00A77A40 /* ReplyDetailInfoView.m in Sources */,
+				4840284C1C9569B500A77A40 /* SDPhotoBrowser.m in Sources */,
 				48AA39501C8F25A5006EE079 /* UserInfoView.m in Sources */,
 				844D0CA51C897FDA00869FC2 /* FontAwesome.m in Sources */,
 				8421131E1C9025A3003D5714 /* UserInfoModel.m in Sources */,
+				480F937A1C9434570089AF28 /* PostReplyTableViewCell.m in Sources */,
 				48AA39531C8F2F04006EE079 /* PostInfoView.m in Sources */,
+				485A86EC1C93EF830062BA73 /* PostReplyModel.m in Sources */,
 				844D0CB71C89820000869FC2 /* NSString+EMAdditions.m in Sources */,
 				844D0CA81C897FDA00869FC2 /* SJEmojiLabel.m in Sources */,
 				844D0CB61C89820000869FC2 /* EMStylingClass.m in Sources */,
@@ -1627,11 +1703,14 @@
 			baseConfigurationReference = 4FDB5B361ECD53804C7BF8F3 /* Pods-NNACommunity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NNACommunity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1640,11 +1719,14 @@
 			baseConfigurationReference = 7276CD9AE29897E3EFB13172 /* Pods-NNACommunity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NNACommunity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

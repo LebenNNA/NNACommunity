@@ -17,14 +17,14 @@
         _Level = @"LV12";
         _Date = @"2016-01-01";
         _Place = @"上海市";
-        _isMall = YES;
+        _isMale = YES;
     } else {
         _Name = @"夜踹寡妇门";
         _Head = @"headPic";
         _Level = @"LV10";
         _Date = @"2016-11-11";
         _Place = @"北京市";
-        _isMall = NO;
+        _isMale = NO;
     }
     _isMaster = isMaster;
     return self;

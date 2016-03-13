@@ -10,13 +10,19 @@
 #import "PostInfoView.h"
 #import "NNAEmoInputBar.h"
 #import "PostInfoTableViewCell.h"
+#import "ReplyViewController.h"
+#import "PostReplyModel.h"
+#import "ReplyContentModel.h"
+#import "PostInfoModel.h"
+#import "MJExtension.h"
 
 @interface KKKViewController () <UITableViewDataSource, UITableViewDelegate> {
     UITableView *_table;
     NNAEmoInputBar *_inputBar;
     PostInfoView *_postView;
-    NSMutableArray *_replyArr;
-    NSArray *_replyArr1;
+    PostReplyModel *prM;
+    PostInfoModel *postM;
+    NSArray *_prMArr;
 }
 
 @end
@@ -26,8 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    _replyArr = [[NSMutableArray alloc]initWithCapacity:0];
-    _replyArr1 = [[NSArray alloc]init];
+    _prMArr = [[NSArray alloc] init];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self layoutTableView];
     [self layoutInputBar];
@@ -53,7 +58,6 @@
 - (void)layoutTableView {
     _table = [[UITableView alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.view.bounds), 64, SCREEN_W, CGRectGetHeight(self.view.bounds)-108)];//44是inputview高度
     [self.view addSubview:_table];
-//    [_table setBackgroundColor:[UIColor redColor]];
     _table.dataSource = self;
     _table.delegate = self;
     _table.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
@@ -65,34 +69,29 @@
 
 - (void)layoutPostInfoView {
     _postView = [[PostInfoView alloc] init];
-    CGFloat height = [_postView setText];
+}
+
+- (void)loadDate {
+    NSArray *postArr =  [NSMutableArray objectArrayWithFilename:@"Post.plist"];
+    postArr = [PostInfoModel objectArrayWithKeyValuesArray:postArr];
+    postM = postArr[0];
+    CGFloat height = [_postView setContentWithModel:postM];
     NSArray *imgArr = [[NSArray alloc] initWithObjects:@"hzw1@2x.jpg", @"hzw2@2x.jpg", @"hzw3@2x.jpg", nil];
     height = [_postView setImagesWithArray:imgArr];
     [_postView setFrame:CGRectMake(0, 0, SCREEN_W, height)];
     _table.tableHeaderView = _postView;
-//    [_table.tableHeaderView setBackgroundColor:[UIColor yellowColor]];
     
-}
+    _prMArr = [PostReplyModel objectArrayWithKeyValuesArray:postM.PostReplyArr];
 
-- (void)loadDate {
-    NSInteger i = 0;
-    while (i<5) {
-        i++;
-        NSString *string = @"我是谁：";
-        NSInteger n = i;
-        while (n>0) {
-            n--;
-            string = [NSString stringWithFormat:@"%@对酒当歌，人生几何。", string];
-        }
-        [_replyArr addObject:string];
-    }
-    _replyArr1 = @[@"小王：借楼！！！", @"小李：借楼！！！", @"小东：再借楼！！！！！！！！！！！！！！！！！！！！！！[微笑]"];
-    
     [_table reloadData];
+    
 }
 
 - (void)sendAction:(NSString *)text {
-    [_replyArr addObject:[NSString stringWithFormat:@"我的回复：%@", text]];
+    PostReplyModel *pM = [[PostReplyModel alloc] init];
+    pM.User = [[UserInfoModel alloc]initWithIsMaster:YES];
+    pM.Reply = [NSString stringWithFormat:@"我的回复：%@", text];
+    pM.ReplyArr = @[];
     [_table reloadData];
 }
 
@@ -111,7 +110,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _replyArr.count;
+    return _prMArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -123,7 +122,7 @@
     [sectionV setBackgroundColor:[UIColor grayColor]];
     UILabel *sectionL = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, SCREEN_W-20, 30)];
     [sectionL setBackgroundColor:[UIColor clearColor]];
-    [sectionL setText:[NSString stringWithFormat:@"回帖（%lu）", (_replyArr.count)]];
+    [sectionL setText:[NSString stringWithFormat:@"回帖（%lu）", (_prMArr.count)]];
     [sectionV addSubview:sectionL];
     return sectionV;
 }
@@ -137,21 +136,23 @@
     if (cell == nil) {
         cell = [[PostInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    BOOL isMaster = NO;
-    if (indexPath.row%2==0) {
-        isMaster = YES;
-    } else {
-        isMaster = NO;
-    }
-    UserInfoModel *model = [[UserInfoModel alloc]initWithIsMaster:isMaster];
-    [cell.userV setUserInfoWithModel:model];
-    [cell.userV.cityL setHidden:YES];
-    [cell setFloorNumber:indexPath.row+1];
-    [cell setReplyText:_replyArr[indexPath.row] replyArr:_replyArr1];
+    PostReplyModel *model = _prMArr[indexPath.row];
+    [cell.priV.userV setUserInfoWithModel:model.User];
+    [cell.priV.userV.cityL setHidden:YES];
+    [cell.priV setFloorNumber:indexPath.row+1];
+    NSArray *replyContentArr = [ReplyContentModel objectArrayWithKeyValuesArray:model.ReplyArr];
+    [cell.priV setReplyText:model.Reply replyArr:replyContentArr];
     
 //    [cell setBackgroundColor:[UIColor orangeColor]];
     return cell;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ReplyViewController *rVC = [[ReplyViewController alloc] init];
+    rVC.prM = _prMArr[indexPath.row];
+    rVC.prM.Floor = indexPath.row+1;
+    [self.navigationController pushViewController:rVC animated:YES];
 }
 
 @end

@@ -10,10 +10,11 @@
 #import "Masonry.h"
 #import "SJEmojiLabel.h"
 #import "UserInfoView.h"
+#import "PostInfoModel.h"
 
 @interface PostInfoView : UIView
 
-- (CGFloat)setText;
+- (CGFloat)setContentWithModel:(PostInfoModel *)model;
 - (CGFloat)setImagesWithArray:(NSArray *)array;
 
 @end

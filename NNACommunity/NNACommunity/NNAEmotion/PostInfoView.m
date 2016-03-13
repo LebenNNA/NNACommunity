@@ -7,13 +7,16 @@
 //
 
 #import "PostInfoView.h"
-#import "UserInfoModel.h"
+#import "SDPhotoBrowser.h"
+//#import "UIButton+WebCache.h"
 
 #define UserV_h 60
 #define TitleL_Margin_t 10
 
-@interface PostInfoView () {
+@interface PostInfoView () <SDPhotoBrowserDelegate> {
     float HH;
+    NSArray *picArr;
+    UIView *picBgView;
 }
 
 @property (nonatomic, strong) UserInfoView *userV;
@@ -67,21 +70,19 @@
     
 }
 
-- (CGFloat)setText {
-    
-    UserInfoModel *model = [[UserInfoModel alloc]initWithIsMaster:YES];
-    [_userV setUserInfoWithModel:model];
-    
-    _titleL.text = @"嘿嘿，夜深人静[淫笑]";
+- (CGFloat)setContentWithModel:(PostInfoModel *)model {
+    [_userV setUserInfoWithModel:model.User];
+    _titleL.text = model.Title;
     CGSize tH = [self stringLabelRectWithFont:[UIFont systemFontOfSize:30] textString:_titleL.text width:SCREEN_W-20];
     [_titleL mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(tH.height);
     }];
     
-    NSString *text = @"对潇潇暮雨洒江天，一番洗清秋。\n[微笑]渐霜风凄紧，关河冷落，残照当楼。\n[微笑]是处红衰翠减，苒苒物华休。\n惟有长江水，无语东流。不忍登高临远，望故乡渺邈，归思难收。\n[微笑] 叹年来踪迹，何事苦淹留。[微笑] 想佳人、妆楼颙望，误几回、天际识归舟。争知我、倚阑干处，正恁凝愁 [微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑][微笑]";
+    NSString *text = model.Content;
+    text = [text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
     _infoL.text = text;
     
-    CGSize iH = [self getAttributeSizeWithString:text width:SCREEN_W-20 font:_infoL.font];
+    CGSize iH = [self getAttributeSizeWithString:text width:(SCREEN_W-20) font:_infoL.font];
     [_infoL mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(iH.height);
     }];
@@ -93,16 +94,45 @@
 
 - (CGFloat)setImagesWithArray:(NSArray *)array {
     if (array.count>0) {
+        picArr = array;
+        picBgView = [[UIView alloc]initWithFrame:CGRectMake(0, HH, SCREEN_W, 100)];
+        [self addSubview:picBgView];
+        __block CGFloat hh = 0;
         [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            UIImageView *picIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, HH, SCREEN_W, 100)];
-//            picIV.contentMode = UIViewContentModeScaleAspectFit;
+            UIButton *picBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, hh, SCREEN_W, 100)];
+//            [picBtn sd_setImageWithURL:[NSURL URLWithString:array[idx]] forState:UIControlStateNormal];
+            [picBtn setBackgroundImage:[UIImage imageNamed:array[idx]] forState:UIControlStateNormal];
+            picBtn.tag = idx;
+            [picBtn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
             HH += 110;
-            [self addSubview:picIV];
-            [picIV setImage:[UIImage imageNamed:array[idx]]];
+            hh += 110;
+            [picBgView addSubview:picBtn];
         }];
-
     }
+    [picBgView setFrame:CGRectMake(0, picBgView.frame.origin.y, SCREEN_W, HH-picBgView.frame.origin.y)];
     return HH;
+}
+
+- (void)buttonClick:(UIButton *)sender {
+    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
+    browser.sourceImagesContainerView = picBgView; // 原图的父控件
+    browser.imageCount = picArr.count; // 图片总数
+    browser.currentImageIndex = sender.tag;
+    browser.delegate = self;
+    [browser show];
+    
+}
+
+// 返回临时占位图片（即原来的小图）
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index {
+    return [UIImage imageNamed:picArr[index]];
+}
+
+
+// 返回高质量图片的url
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index {
+//    NSString *urlStr = [[self.photoItemArray[index] thumbnail_pic] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+    return nil;
 }
 
 - (CGSize)stringLabelRectWithFont:(UIFont *)font textString:(NSString *)string width:(CGFloat)width {
@@ -121,7 +151,7 @@
     NSMutableParagraphStyle *paragrapStyle = [[NSMutableParagraphStyle alloc] init];
     paragrapStyle.lineSpacing = 6;
     [attrString addAttribute:NSParagraphStyleAttributeName value:paragrapStyle range:NSMakeRange(0, text.length)];
-    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:NSMakeRange(0, text.length)];
+    [attrString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, text.length)];
     CGSize size = [SJEmojiLabel sizeThatFitsAttributedString:attrString withConstraints:CGSizeMake(width, MAXFLOAT) limitedToNumberOfLines:0];
     return size;
 }
