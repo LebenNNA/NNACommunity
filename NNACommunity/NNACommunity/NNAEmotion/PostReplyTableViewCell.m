@@ -10,9 +10,10 @@
 #import "SJRichLabel.h"
 #import "Masonry.h"
 
-@interface PostReplyTableViewCell ()
+@interface PostReplyTableViewCell () <MLEmojiLabelDelegate>
 
 @property (nonatomic, strong) SJRichLabel *contentL;
+@property (nonatomic, strong) ReplyContentModel *rcModel;
 
 @end
 
@@ -23,6 +24,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     if (self) {
         _contentL = [SJRichLabel new];
+        _contentL.delegate = self;
         _contentL.numberOfLines = 0;
         [self.contentView addSubview:_contentL];
         
@@ -38,7 +40,24 @@
 }
 
 - (void)setContentWithModel:(ReplyContentModel *)model {
-    _contentL.text = [NSString stringWithFormat:@"%@：%@", model.User.Name, model.Content];
+    _rcModel = model;
+    _contentL.text = [NSString stringWithFormat:@"<url>%@</url>：%@", model.User.Name, model.Content];
+    [self setRichText];
+}
+
+- (void)setRichText {
+    NSString *url = @"";
+    url = [SJRichLabel urlEncode:url]; //链接带中文需要encode
+    
+    NSMutableArray *urls = [NSMutableArray arrayWithObjects:url, nil];
+    [_contentL addLinkText:_contentL.text linkUrlArray:urls];
+}
+
+#pragma mark - TTTAttributedLabelDelegate
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    NSString *str = [NSString stringWithFormat:@"Name:%@", _rcModel.User.Name];
+    NSLog(str);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
