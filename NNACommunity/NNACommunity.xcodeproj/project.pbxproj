@@ -24,6 +24,7 @@
 		484F61E31C91CB750009B725 /* ReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484F61E21C91CB750009B725 /* ReplyViewController.m */; };
 		485A86E61C93E45A0062BA73 /* PostReplyInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A86E51C93E45A0062BA73 /* PostReplyInfoView.m */; };
 		485A86EC1C93EF830062BA73 /* PostReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A86EB1C93EF830062BA73 /* PostReplyModel.m */; };
+		485C10411C99BE240082BD6E /* nnnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485C10401C99BE240082BD6E /* nnnViewController.m */; };
 		48AA39501C8F25A5006EE079 /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AA394F1C8F25A5006EE079 /* UserInfoView.m */; };
 		48AA39531C8F2F04006EE079 /* PostInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AA39521C8F2F04006EE079 /* PostInfoView.m */; };
 		842113131C8FD1EC003D5714 /* KKKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842113121C8FD1EC003D5714 /* KKKViewController.m */; };
@@ -332,6 +333,8 @@
 		485A86E51C93E45A0062BA73 /* PostReplyInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReplyInfoView.m; sourceTree = "<group>"; };
 		485A86EA1C93EF830062BA73 /* PostReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReplyModel.h; sourceTree = "<group>"; };
 		485A86EB1C93EF830062BA73 /* PostReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReplyModel.m; sourceTree = "<group>"; };
+		485C103F1C99BE230082BD6E /* nnnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nnnViewController.h; sourceTree = "<group>"; };
+		485C10401C99BE240082BD6E /* nnnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nnnViewController.m; sourceTree = "<group>"; };
 		48AA394E1C8F25A5006EE079 /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		48AA394F1C8F25A5006EE079 /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
 		48AA39511C8F2F04006EE079 /* PostInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfoView.h; sourceTree = "<group>"; };
@@ -1061,6 +1064,8 @@
 				849AE46A1C859F57000F9337 /* AppDelegate.m */,
 				846926E41C87DD3900A4B0BB /* ViewController.h */,
 				846926E51C87DD3900A4B0BB /* ViewController.m */,
+				485C103F1C99BE230082BD6E /* nnnViewController.h */,
+				485C10401C99BE240082BD6E /* nnnViewController.m */,
 				842113111C8FD1EC003D5714 /* KKKViewController.h */,
 				842113121C8FD1EC003D5714 /* KKKViewController.m */,
 				484F61E11C91CB750009B725 /* ReplyViewController.h */,
@@ -1540,6 +1545,7 @@
 				485A86E61C93E45A0062BA73 /* PostReplyInfoView.m in Sources */,
 				844D0CB51C89820000869FC2 /* EMStringStylingConfiguration.m in Sources */,
 				4840284D1C9569B500A77A40 /* SDWaitingView.m in Sources */,
+				485C10411C99BE240082BD6E /* nnnViewController.m in Sources */,
 				846926E61C87DD3900A4B0BB /* ViewController.m in Sources */,
 				4840284B1C9569B500A77A40 /* SDBrowserImageView.m in Sources */,
 				8427B4081C86EE72000ABA07 /* NNAEmoBoard.m in Sources */,
